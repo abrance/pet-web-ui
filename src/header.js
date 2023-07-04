@@ -1,5 +1,5 @@
 import React from 'react';
-import FliLogo from '../public/flipos_logo.png';
+import FliLogo from './asset/flipos_logo.png';
 
 const Navigation = () => {
     const navStyle = {
