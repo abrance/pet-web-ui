@@ -93,33 +93,33 @@ const Navigation = () => {
                 </div>
             </li>
             <li style={LongLiStyle}>
-                <a style={linkStyle} href="https://stackoverflow.com/questions/tagged/my-app">Why PetWeb</a>
+                <a style={linkStyle} href="#">Why PetWeb</a>
             </li>
             <li style={ShortLiStyle}>
-                <a style={linkStyle} href="https://github.com/my-app">
+                <a style={linkStyle} href="#">
                     合作商户
                 </a>
             </li>
             <li style={ShortLiStyle}>
-                <a style={linkStyle} href="https://github.com/my-app">
+                <a style={linkStyle} href="#">
                     产品
                 </a>
             </li>
             <li style={ShortLiStyle}>
-                <a style={linkStyle} href="https://github.com/my-app">
+                <a style={linkStyle} href="#">
                     价格
                 </a>
             </li>
             <li style={ShortLiStyle}>
-                <a style={linkStyle} href="https://github.com/my-app">
+                <a style={linkStyle} href="#">
                     联系我们
                 </a>
             </li>
             <li style={NULLRightBlockStyle}>
-                <a style={linkStyle} href="/docs">          </a>
+                <a style={linkStyle} href="#">          </a>
             </li>
             <li style={RightFloatLiStyle}>
-                <a style={linkStyle} href="https://github.com/my-app">
+                <a style={linkStyle} href="#">
                     后台登录
                 </a>
             </li>

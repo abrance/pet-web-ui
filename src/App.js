@@ -1,7 +1,7 @@
 import logo from './asset/PC.jpg';
 import './App.css';
 import Navigation from "./header";
-import React from "react";
+import React, { useState, useEffect }  from "react";
 
 function Body() {
     const sectionStyle = {
@@ -35,6 +35,26 @@ function Body() {
         width: `calc(100vw / 3)`,
     };
 
+    const [text, setText] = useState('');
+
+    useEffect(() => {
+        const sloganText = 'Pet 是一个非常好的产品, 要了解详情，请联系我们'; // 你想要显示的文字
+
+        let index = 0;
+        const interval = setInterval(() => {
+            setText(sloganText.substring(0, index));
+            index++;
+
+            if (index > sloganText.length) {
+                clearInterval(interval);
+            }
+        }, 100); // 间隔时间，控制文字逐步显示的速度
+
+        return () => {
+            clearInterval(interval); // 清除 interval，确保组件卸载时停止动画
+        };
+    }, []);
+
     return (
         <div>
             <header style={headerStyle}>
@@ -42,7 +62,7 @@ function Body() {
             </header>
             <section style={sectionStyle}>
                 <div style={divStyle}>
-                    <h1 style={sloganStyle}>Pet 是一个非常好的产品, 要了解详情，请联系我们</h1> {/* 在 <div> 图片上方显示 <h1> */}
+                    <h1 style={sloganStyle}>{text}</h1> {/* 在 <div> 图片上方显示 <h1> */}
                 </div>
             </section>
         </div>
