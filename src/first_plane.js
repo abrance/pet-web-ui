@@ -10,12 +10,13 @@ function FirstPlane() {
 
     const divStyle = {
         backgroundImage: `url(${logo})`,
-        backgroundSize: 'cover',
+        backgroundSize: '100% auto',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         width: '100%',
-        height: '800px',
-        margin: 'auto',
+        // 使这个元素占据屏幕 85%, 使首页不会因为大图出现滚动条
+        height: '85vh',
+        //margin: 'auto',
         position: 'relative', // 添加相对定位
     };
 
@@ -31,6 +32,17 @@ function FirstPlane() {
         textAlign: 'center', // 文字水平居中
         width: `calc(100vw / 3)`,
     };
+
+    // 添加空白区, 在最下层占满屏幕, 这样实现背景颜色跟大图一致
+    const BlankSectionStyle = {
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100vh',
+        backgroundColor: 'rgb(246, 246, 248)',
+        zIndex: -1,
+    }
 
     const [text, setText] = useState('');
 
@@ -53,11 +65,14 @@ function FirstPlane() {
     }, []);
 
     return (
-        <section style={sectionStyle}>
-            <div style={divStyle}>
-                <h1 style={sloganStyle}>{text}</h1> {/* 在 <div> 图片上方显示 <h1> */}
-            </div>
-        </section>
+        <div>
+            <section style={sectionStyle}>
+                <div style={divStyle}>
+                    <h1 style={sloganStyle}>{text}</h1> {/* 在 <div> 图片上方显示 <h1> */}
+                </div>
+            </section>
+            <section style={BlankSectionStyle}></section>
+        </div>
     )
 }
 

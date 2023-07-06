@@ -9,7 +9,12 @@ yarn start
 页面 favicon 修改
 
 
+# DOING
+
+
+
 # DO
 页面标签页名称修改
+调整首页大图, 使背景颜色一支, 并让首页不出现滚动条
 
 # UNPLANNED
