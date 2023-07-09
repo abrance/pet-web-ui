@@ -2,19 +2,46 @@ import React from "react";
 import './App.css';
 import Navigation from "./header";
 import FirstPlane from "./first_plane";
+import CompanyPlane from "./company";
+import WhyPlane from "./why";
 
-function Body() {
+class Body extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            pageName: "first_plane",
+        }
+        this.headerStyle = {}
+    }
 
-    const headerStyle = {};
+    handleUpdatePage = (newPage) => {
+        this.setState({pageName: newPage})
+    }
 
-    return (
-        <div>
-            <header style={headerStyle}>
-                <Navigation />
-            </header>
-            <FirstPlane />
-        </div>
-    );
+    //const headerStyle = {};
+
+    //var pageName="first_plane"
+
+    render() {
+        var element = <FirstPlane />
+        var s = this.state
+        if (this.state.pageName === "first_plane") {
+            element = <FirstPlane />
+        } else if (this.state.pageName === "why_plane") {
+            element = <WhyPlane />
+        } else if (this.state.pageName === "company") {
+            element = <CompanyPlane />
+        }
+        return (
+            <div>
+                <header style={this.headerStyle}>
+                    <Navigation proper={s} OnUpdatePage={this.handleUpdatePage} />
+                </header>
+
+                {element}
+            </div>
+        )
+    }
 }
 
 function App() {
