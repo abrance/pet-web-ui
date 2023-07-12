@@ -1,15 +1,21 @@
 import React from 'react';
 import FliLogo from './asset/flipos_logo.png';
+import {connect} from "react-redux";
 
+const mapDispatchToProps = (dispatch) => {
+    return {
+        updateApp: (pageName) => {
+            dispatch({ type: 'UPDATE_APP', payload: pageName }); // 分发一个 action 更新 app 字段的值
+        },
+    };
+};
 
 class Navigation extends React.Component {
     handleClick = (pageName) => {
         return () => {
-            this.props.OnUpdatePage(pageName)
-            //window.location.href = "localhost:3000";
-        }
-    }
-
+            this.props.updateApp(pageName); // 分发一个 action 更新 app 字段的值
+        };
+    };
     render() {
         const navStyle = {
             listStyleType: "none",
@@ -18,7 +24,6 @@ class Navigation extends React.Component {
             overflow: "hidden",
             backgroundColor: "#fff",
         };
-
         const NULLLeftBlockStyle = {
             paddingLeft: "100px",
             float: "left",
@@ -26,7 +31,6 @@ class Navigation extends React.Component {
             alignItems: "center",
             height: "80px",
         };
-
         const NULLRightBlockStyle = {
             marginRight: "100px",
             float: "right",
@@ -34,14 +38,12 @@ class Navigation extends React.Component {
             alignItems: "center",
             height: "80px",
         };
-
         const RightFloatLiStyle = {
             float: "right",
             display: "flex",
             alignItems: "center",
             height: "80px",
         };
-
         const linkStyle = {
             display: "block",
             color: "black",
@@ -52,7 +54,6 @@ class Navigation extends React.Component {
             fontSize: "12.475px",
             fontWeight: "bold",
         };
-
         const LongLiStyle = {
             marginLeft: "100px",
             float: "left",
@@ -60,7 +61,6 @@ class Navigation extends React.Component {
             alignItems: "center",
             height: "80px",
         };
-
         const ShortLiStyle = {
             float: "left",
             display: "flex",
@@ -69,25 +69,16 @@ class Navigation extends React.Component {
             marginLeft: "10px",
             marginRight: "10px",
         };
-
-        // const handleClick = () => {
-        //     window.location.href = "localhost:3000";
-        // };
-
         const imgStyle = {
             height: "24px",
             margin: "auto",
         };
-
         const liStyle = {
             float: "left",
             display: "flex",
             alignItems: "center",
             height: "80px",
         };
-
-        const {proper} = this.props
-
         return (
             <ul style={navStyle}>
                 <li style={NULLLeftBlockStyle}>
@@ -142,4 +133,6 @@ class Navigation extends React.Component {
     }
 }
 
-export default Navigation;
+const ConnectedNavigation = connect(null, mapDispatchToProps)(Navigation)
+
+export default ConnectedNavigation;
