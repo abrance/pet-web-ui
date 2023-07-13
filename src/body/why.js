@@ -1,8 +1,8 @@
 import React, { useState, useEffect }  from "react";
-import logo from './asset/PC.jpg';
+import logo from '../asset/PC.jpg';
 
 
-function FirstPlane() {
+function WhyPlane() {
     const sectionStyle = {
         backgroundColor: 'rgb(246, 246, 248)',
         margin: 0,
@@ -31,16 +31,6 @@ function FirstPlane() {
         whiteSpace: 'pre-wrap', // 自动换行
         textAlign: 'center', // 文字水平居中
         width: `calc(100vw / 3)`,
-    };
-
-    const buttonContainerStyle = {
-        padding: "30px 150px",
-        position: 'absolute',
-        top: 'calc(50% + 160px)', // 调整按钮容器的垂直位置
-        left: '10%', // 调整按钮容器的水平位置
-        width: `calc(100vw / 6)`,  // 控制 button 距离
-        display: 'flex',
-        justifyContent: 'space-between',
     };
 
     // 添加空白区, 在最下层占满屏幕, 这样实现背景颜色跟大图一致
@@ -79,20 +69,6 @@ function FirstPlane() {
             <section style={sectionStyle}>
                 <div style={divStyle}>
                     <h1 style={sloganStyle}>{text}</h1> {/* 在 <div> 图片上方显示 <h1> */}
-                    <div style={buttonContainerStyle}>
-                        <button
-                            style={{ backgroundColor: 'black', color: 'white' }}
-                            //onClick={handleRegisterClick}
-                        >
-                            注册使用
-                        </button>
-                        <button
-                            style={{ backgroundColor: 'white', color: 'black' }}
-                            //onClick={handleContactClick}
-                        >
-                            联系我们
-                        </button>
-                    </div>
                 </div>
             </section>
             <section style={BlankSectionStyle}></section>
@@ -100,4 +76,4 @@ function FirstPlane() {
     )
 }
 
-export default FirstPlane
+export default WhyPlane

@@ -1,5 +1,5 @@
 import React from 'react';
-import FliLogo from './asset/flipos_logo.png';
+import FliLogo from '../asset/flipos_logo.png';
 import {connect} from "react-redux";
 
 const mapDispatchToProps = (dispatch) => {
@@ -95,32 +95,18 @@ class Navigation extends React.Component {
                     </div>
                 </li>
                 <li style={LongLiStyle}>
-                    <a style={linkStyle}  onClick={this.handleClick('why_plane')}>
-                        Why PetWeb
-                    </a>
+                    <div style={linkStyle}  onClick={this.handleClick('why_plane')}>
+                        宠物管理系统
+                    </div>
                 </li>
                 <li style={ShortLiStyle}>
                     <a style={linkStyle} onClick={this.handleClick('company')}>
-                        合作商户
-                    </a>
-                </li>
-                <li style={ShortLiStyle}>
-                    <a style={linkStyle} href="#">
-                        产品
-                    </a>
-                </li>
-                <li style={ShortLiStyle}>
-                    <a style={linkStyle} href="#">
-                        价格
+                        餐饮管理系统
                     </a>
                 </li>
                 <li style={ShortLiStyle}>
                     <a style={linkStyle} href="#">
                         联系我们
-                    </a>
-                </li>
-                <li style={NULLRightBlockStyle}>
-                    <a style={linkStyle} href="#">
                     </a>
                 </li>
                 <li style={RightFloatLiStyle}>

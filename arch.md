@@ -4,5 +4,5 @@
 
 # Route 现在还没有想好怎么做
 
-# APP 分为 NavHeader Body 两个组件， NavHeader 是导航栏
+# APP 分为 NavHeader Index 两个组件， NavHeader 是导航栏
 

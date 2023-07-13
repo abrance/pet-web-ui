@@ -1,15 +1,8 @@
 import React from "react";
 import './App.css';
-
-import ConnectedNavigation from "./header";
 import Body from "./body";
+import NavHeader from "./header";
 
-
-function NavHeader() {
-    return (
-        <header><ConnectedNavigation /></header>
-    )
-}
 
 function App() {
   return (

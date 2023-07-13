@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import Icon from "./asset/logo.svg"
+import Icon from "../asset/logo.svg"
 
 function CompanyPlane() {
     const sectionStyle = {

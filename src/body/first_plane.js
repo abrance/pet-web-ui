@@ -1,8 +1,8 @@
 import React, { useState, useEffect }  from "react";
-import logo from './asset/PC.jpg';
+import logo from '../asset/PC.jpg';
 
 
-function WhyPlane() {
+function FirstPlane() {
     const sectionStyle = {
         backgroundColor: 'rgb(246, 246, 248)',
         margin: 0,
@@ -33,6 +33,22 @@ function WhyPlane() {
         width: `calc(100vw / 3)`,
     };
 
+    const buttonContainerStyle = {
+        padding: "30px 150px",
+        position: 'absolute',
+        top: 'calc(50% + 160px)', // 调整按钮容器的垂直位置
+        left: '10%', // 调整按钮容器的水平位置
+        width: `calc(100vw / 6)`,  // 控制 button 距离
+        display: 'flex',
+        justifyContent: 'space-between',
+    };
+
+    const connectMeStyle = {
+        backgroundColor: 'white',
+        color: 'black',
+        //display: 'flex',
+    }
+
     // 添加空白区, 在最下层占满屏幕, 这样实现背景颜色跟大图一致
     const BlankSectionStyle = {
         position: 'fixed',
@@ -47,7 +63,7 @@ function WhyPlane() {
     const [text, setText] = useState('');
 
     useEffect(() => {
-        const sloganText = 'Pet 是一个非常好的产品, 要了解详情，请联系我们'; // 你想要显示的文字
+        const sloganText = '一站式收银、小程序及会员整合解决方案'; // 你想要显示的文字
 
         let index = 0;
         const interval = setInterval(() => {
@@ -69,6 +85,11 @@ function WhyPlane() {
             <section style={sectionStyle}>
                 <div style={divStyle}>
                     <h1 style={sloganStyle}>{text}</h1> {/* 在 <div> 图片上方显示 <h1> */}
+                    <div style={buttonContainerStyle}>
+                        <button style={ connectMeStyle }>
+                            联系我们
+                        </button>
+                    </div>
                 </div>
             </section>
             <section style={BlankSectionStyle}></section>
@@ -76,4 +97,4 @@ function WhyPlane() {
     )
 }
 
-export default WhyPlane
+export default FirstPlane

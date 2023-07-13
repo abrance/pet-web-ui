@@ -1,29 +1,30 @@
 import React from "react";
-import FirstPlane from "./first_plane";
-import CompanyPlane from "./company";
-import WhyPlane from "./why";
 import {connect} from "react-redux";
+import FirstPlane from "./first_plane";
+import WhyPlane from "./why";
+import CompanyPlane from "./company";
 
-const mapStateToProps = (state) => {
+export const mapStateToProps = (state) => {
     return {
         app: state.app, // 通过映射将 app 属性映射为组件的 prop
     };
 };
 
-class Body extends React.Component{
+export class Index extends React.Component {
     constructor(props) {
         super(props);
     }
+
     render() {
         let appName = this.props.app
-        let element = <FirstPlane />
+        let element = <FirstPlane/>
 
         if (appName === "first_plane") {
-            element = <FirstPlane />
+            element = <FirstPlane/>
         } else if (appName === "why_plane") {
-            element = <WhyPlane />
+            element = <WhyPlane/>
         } else if (appName === "company") {
-            element = <CompanyPlane />
+            element = <CompanyPlane/>
         }
         return (
             <div>
@@ -33,4 +34,4 @@ class Body extends React.Component{
     }
 }
 
-export default connect(mapStateToProps)(Body);
+export default connect(mapStateToProps)(Index);
