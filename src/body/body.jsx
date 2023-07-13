@@ -10,7 +10,7 @@ export const mapStateToProps = (state) => {
     };
 };
 
-export class Index extends React.Component {
+export class Body extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -21,7 +21,7 @@ export class Index extends React.Component {
 
         if (appName === "first_plane") {
             element = <FirstPlane/>
-        } else if (appName === "why_plane") {
+        } else if (appName === "pet_plane") {
             element = <WhyPlane/>
         } else if (appName === "company") {
             element = <CompanyPlane/>
@@ -34,4 +34,4 @@ export class Index extends React.Component {
     }
 }
 
-export default connect(mapStateToProps)(Index);
+export default connect(mapStateToProps)(Body);

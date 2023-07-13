@@ -1,6 +1,8 @@
 import React from 'react';
 import FliLogo from '../asset/flipos_logo.png';
 import {connect} from "react-redux";
+import Navbar from "./navbar";
+import ConnectMeModal from "../modal/connect_me";
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -95,19 +97,20 @@ class Navigation extends React.Component {
                     </div>
                 </li>
                 <li style={LongLiStyle}>
-                    <div style={linkStyle}  onClick={this.handleClick('why_plane')}>
-                        宠物管理系统
+                    <div style={linkStyle}  onClick={this.handleClick('pet_plane')}>
+                        <Navbar title="宠物管理系统" keyword="pet"/>
                     </div>
                 </li>
                 <li style={ShortLiStyle}>
                     <a style={linkStyle} onClick={this.handleClick('company')}>
-                        餐饮管理系统
+                        <Navbar title="餐饮管理系统" keyword="food"/>
                     </a>
                 </li>
                 <li style={ShortLiStyle}>
-                    <a style={linkStyle} href="#">
-                        联系我们
-                    </a>
+                    {/*<a style={linkStyle} href="#">*/}
+                    {/*    联系我们*/}
+                    {/*</a>*/}
+                    <ConnectMeModal />
                 </li>
                 <li style={RightFloatLiStyle}>
                     <a style={linkStyle} href="#">
