@@ -1,5 +1,6 @@
 import React from 'react'
 import PetProductMatrixStorePlane from "./pet_product_matrix_store_plane";
+import PetProductNavbar from "./pet_product_nav_bar";
 
 class PetProductMatrixPlane extends React.Component{
     constructor(props) {
@@ -10,8 +11,8 @@ class PetProductMatrixPlane extends React.Component{
         const smallSloganStyle = {
             fontSize: '14px',
             fontFamily: 'ui-sans-serif',
-            padding: '50px'
-
+            padding: '50px',
+            fontWeight: 'bold'
         }
         const bigSloganStyle = {
             marginBottom: '0px',
@@ -21,6 +22,9 @@ class PetProductMatrixPlane extends React.Component{
         }
         const BlankDivStyle = {
             height: '150px'
+        }
+        const petProductNavbarStyle = {
+            margin: '30px 10%'
         }
 
         const smallSlogan = 'OUR PRODUCTS'
@@ -39,7 +43,11 @@ class PetProductMatrixPlane extends React.Component{
                 </div>
                 <div style={BlankDivStyle}>
                 </div>
-                <PetProductMatrixStorePlane />
+                <div style={petProductNavbarStyle}>
+                    <PetProductNavbar />
+                </div>
+
+                {/*<PetProductMatrixStorePlane />*/}
             </div>
         )
     }
