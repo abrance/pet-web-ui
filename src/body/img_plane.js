@@ -1,6 +1,6 @@
 import React, { useState, useEffect }  from "react";
 import logo from '../asset/PC.jpg';
-import {PetProductAdvantageDes} from "./pet_product_advan_des";
+import {PetProductAdvantageDes} from "./pet/pet_product_advan_des";
 
 
 const buttonContainerStyle = {

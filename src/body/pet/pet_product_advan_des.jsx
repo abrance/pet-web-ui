@@ -1,8 +1,7 @@
-import Icon from '../asset/logo.svg'
+import Icon from '../../asset/logo.svg'
 
 // 添加空白区, 在最下层占满屏幕, 这样实现背景颜色跟大图一致
 const BlankSectionStyle = {
-
     height: '100px',
     width: '100%',
     display: 'flex',

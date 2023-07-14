@@ -2,6 +2,7 @@ import React from "react";
 import {connect} from "react-redux";
 import ImgPlane from "./img_plane";
 import CompanyPlane from "./company";
+import PetProductMatrixPlane from "./pet/pet_product_matrix_plane";
 
 export const mapStateToProps = (state) => {
     return {
@@ -28,6 +29,8 @@ export class Body extends React.Component {
             element = <ImgPlane pageName='pet_product_advantage_plane' />
         } else if (appName === "company") {
             element = <CompanyPlane/>
+        } else if (appName === "pet_product_matrix_plane") {
+            element = <PetProductMatrixPlane />
         }
         return (
             <div style={bodyStyle}>

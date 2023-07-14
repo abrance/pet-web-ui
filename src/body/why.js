@@ -1,7 +1,7 @@
 import React, { useState, useEffect }  from "react";
 import logo from '../asset/PC.jpg';
 
-
+// TODO 去掉 why
 function WhyPlane() {
     const sectionStyle = {
         backgroundColor: 'rgb(246, 246, 248)',
