@@ -1,7 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
-import FirstPlane from "./first_plane";
-import WhyPlane from "./why";
+import ImgPlane from "./img_plane";
 import CompanyPlane from "./company";
 
 export const mapStateToProps = (state) => {
@@ -16,18 +15,22 @@ export class Body extends React.Component {
     }
 
     render() {
-        let appName = this.props.app
-        let element = <FirstPlane/>
+        const bodyStyle = {
+            backgroundColor: 'rgb(246, 246, 248)',
+        }
 
-        if (appName === "first_plane") {
-            element = <FirstPlane/>
-        } else if (appName === "pet_plane") {
-            element = <WhyPlane/>
+        let appName = this.props.app
+        let element = <ImgPlane pageName='index' />
+
+        if (appName === "index") {
+            element = <ImgPlane pageName='index' />
+        } else if (appName === "pet_product_advantage_plane") {
+            element = <ImgPlane pageName='pet_product_advantage_plane' />
         } else if (appName === "company") {
             element = <CompanyPlane/>
         }
         return (
-            <div>
+            <div style={bodyStyle}>
                 {element}
             </div>
         )

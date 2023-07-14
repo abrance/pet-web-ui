@@ -1,8 +1,32 @@
 import React, { useState, useEffect }  from "react";
 import logo from '../asset/PC.jpg';
+import {PetProductAdvantageDes} from "./pet_product_advan_des";
 
 
-function FirstPlane() {
+const buttonContainerStyle = {
+    padding: "30px 150px",
+    position: 'absolute',
+    top: 'calc(50% + 160px)', // 调整按钮容器的垂直位置
+    left: '10%', // 调整按钮容器的水平位置
+    width: `calc(100vw / 6)`,  // 控制 button 距离
+    display: 'flex',
+    justifyContent: 'space-between',
+};
+
+
+const connectMeStyle = {
+    backgroundColor: 'white',
+    color: 'black',
+    //display: 'flex',
+}
+
+const ConnectMeButton = <div style={buttonContainerStyle}>
+    <button style={ connectMeStyle }>
+        联系我们
+    </button>
+</div>
+
+function ImgPlane({pageName}) {
     const sectionStyle = {
         backgroundColor: 'rgb(246, 246, 248)',
         margin: 0,
@@ -33,33 +57,6 @@ function FirstPlane() {
         width: `calc(100vw / 3)`,
     };
 
-    const buttonContainerStyle = {
-        padding: "30px 150px",
-        position: 'absolute',
-        top: 'calc(50% + 160px)', // 调整按钮容器的垂直位置
-        left: '10%', // 调整按钮容器的水平位置
-        width: `calc(100vw / 6)`,  // 控制 button 距离
-        display: 'flex',
-        justifyContent: 'space-between',
-    };
-
-    const connectMeStyle = {
-        backgroundColor: 'white',
-        color: 'black',
-        //display: 'flex',
-    }
-
-    // 添加空白区, 在最下层占满屏幕, 这样实现背景颜色跟大图一致
-    const BlankSectionStyle = {
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100vh',
-        backgroundColor: 'rgb(246, 246, 248)',
-        zIndex: -1,
-    }
-
     const [text, setText] = useState('');
 
     useEffect(() => {
@@ -80,21 +77,24 @@ function FirstPlane() {
         };
     }, []);
 
+    let describe, connectMeBtn;
+    if (pageName === 'index') {
+        connectMeBtn = ConnectMeButton
+    } else if (pageName === 'pet_product_advantage_plane') {
+        describe = PetProductAdvantageDes
+    }
+
     return (
         <div>
             <section style={sectionStyle}>
                 <div style={divStyle}>
                     <h1 style={sloganStyle}>{text}</h1> {/* 在 <div> 图片上方显示 <h1> */}
-                    <div style={buttonContainerStyle}>
-                        <button style={ connectMeStyle }>
-                            联系我们
-                        </button>
-                    </div>
+                    {connectMeBtn}
                 </div>
             </section>
-            <section style={BlankSectionStyle}></section>
+            {describe}
         </div>
     )
 }
 
-export default FirstPlane
+export default ImgPlane

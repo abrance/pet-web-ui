@@ -1,16 +1,10 @@
 import React from 'react';
 import FliLogo from '../asset/flipos_logo.png';
 import {connect} from "react-redux";
-import Navbar from "./navbar";
+import {ConnectedNavbar} from "./navbar";
 import ConnectMeModal from "../modal/connect_me";
+import {mapDispatchToProps} from "../body/dispatch_action";
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        updateApp: (pageName) => {
-            dispatch({ type: 'UPDATE_APP', payload: pageName }); // 分发一个 action 更新 app 字段的值
-        },
-    };
-};
 
 class Navigation extends React.Component {
     handleClick = (pageName) => {
@@ -91,19 +85,21 @@ class Navigation extends React.Component {
                         <img
                             src={FliLogo}
                             alt="图片描述"
-                            onClick={this.handleClick('first_plane')}
+                            onClick={this.handleClick('index')}
                             style={imgStyle}
                         />
                     </div>
                 </li>
                 <li style={LongLiStyle}>
-                    <div style={linkStyle}  onClick={this.handleClick('pet_plane')}>
-                        <Navbar title="宠物管理系统" keyword="pet"/>
+                    <div style={linkStyle}
+                         //onClick={this.handleClick('pet_product_advantage_plane')}
+                    >
+                        <ConnectedNavbar title="宠物管理系统" keyword="pet"/>
                     </div>
                 </li>
                 <li style={ShortLiStyle}>
                     <a style={linkStyle} onClick={this.handleClick('company')}>
-                        <Navbar title="餐饮管理系统" keyword="food"/>
+                        <ConnectedNavbar title="餐饮管理系统" keyword="food"/>
                     </a>
                 </li>
                 <li style={ShortLiStyle}>
