@@ -42,7 +42,6 @@ function ImgPlane({pageName}) {
     }
 
     const divStyle = {
-        //backgroundImage: `url(${logo})`,
         backgroundSize: '100% auto',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -51,6 +50,18 @@ function ImgPlane({pageName}) {
         height: '85vh',
         //margin: 'auto',
         position: 'relative', // 添加相对定位
+    };
+    const smallSloganStyle = {
+        fontSize: '20px',
+        fontFamily: 'ui-sans-serif',
+        fontWeight: 'bold',
+        position: 'absolute', // 添加绝对定位
+        top: '30%', // 位于垂直居中位置
+        left: '10%', // 位于水平居中位置
+        transform: 'translateY(-50%)', // 居中定位
+        whiteSpace: 'pre-wrap', // 自动换行
+        textAlign: 'center', // 文字水平居中
+        width: `calc(100vw / 3)`,
     };
 
     const sloganStyle = {
@@ -67,9 +78,11 @@ function ImgPlane({pageName}) {
     };
 
     const [text, setText] = useState('');
+    const smallSloganText = 'Bitoon Pet'
 
     useEffect(() => {
-        const sloganText = 'Bitoon Pet 一站式宠物店管理系统，集收银、小程序、会员管理于一体All in one'; // 你想要显示的文字
+
+        const sloganText = '一站式宠物店管理系统，集收银、小程序、会员管理于一体All in one'; // 你想要显示的文字
 
         let index = 0;
         const interval = setInterval(() => {
@@ -97,6 +110,7 @@ function ImgPlane({pageName}) {
         <div>
             <section style={sectionStyle}>
                 <div style={divStyle}>
+                    <h5 style={smallSloganStyle}>{smallSloganText}</h5>
                     <h1 style={sloganStyle}>{text}</h1> {/* 在 <div> 图片上方显示 <h1> */}
                     {connectMeBtn}
                 </div>
