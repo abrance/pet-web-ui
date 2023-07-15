@@ -17,7 +17,7 @@ const ConnectMeModal = () => {
     };
     return (
         <>
-            <Button type="primary" onClick={showModal}>
+            <Button onClick={showModal}>
                 联系我们
             </Button>
             <Modal centered open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>

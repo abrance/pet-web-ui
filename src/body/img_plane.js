@@ -1,6 +1,8 @@
 import React, { useState, useEffect }  from "react";
-import logo from '../asset/PC.jpg';
+import logo from '../asset/PC1.png';
 import {PetProductAdvantageDes} from "./pet/pet_product_advan_des";
+import {Image, Button} from 'antd'
+import ConnectMeModal from "../modal/connect_me";
 
 
 const buttonContainerStyle = {
@@ -20,24 +22,31 @@ const connectMeStyle = {
     //display: 'flex',
 }
 
-const ConnectMeButton = <div style={buttonContainerStyle}>
-    <button style={ connectMeStyle }>
-        联系我们
-    </button>
-</div>
+const ConnectMeButton = <div style={buttonContainerStyle}><ConnectMeModal /></div>
+//     = <div style={buttonContainerStyle}>
+//     <Button style={ connectMeStyle } onClick={}>
+//         联系我们
+//     </Button>
+// </div>
 
 function ImgPlane({pageName}) {
     const sectionStyle = {
+        display: 'flex',
         backgroundColor: 'rgb(246, 246, 248)',
         margin: 0,
     };
 
+    const imageDivStyle = {
+        paddingTop: '10%',
+        height: '85vh',
+    }
+
     const divStyle = {
-        backgroundImage: `url(${logo})`,
+        //backgroundImage: `url(${logo})`,
         backgroundSize: '100% auto',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        width: '100%',
+        width: '50%',
         // 使这个元素占据屏幕 85%, 使首页不会因为大图出现滚动条
         height: '85vh',
         //margin: 'auto',
@@ -60,7 +69,7 @@ function ImgPlane({pageName}) {
     const [text, setText] = useState('');
 
     useEffect(() => {
-        const sloganText = '一站式收银、小程序及会员整合解决方案'; // 你想要显示的文字
+        const sloganText = 'Bitoon Pet 一站式宠物店管理系统，集收银、小程序、会员管理于一体All in one'; // 你想要显示的文字
 
         let index = 0;
         const interval = setInterval(() => {
@@ -90,6 +99,9 @@ function ImgPlane({pageName}) {
                 <div style={divStyle}>
                     <h1 style={sloganStyle}>{text}</h1> {/* 在 <div> 图片上方显示 <h1> */}
                     {connectMeBtn}
+                </div>
+                <div style={imageDivStyle}>
+                    <Image preview={false} src={logo}></Image>
                 </div>
             </section>
             {describe}
