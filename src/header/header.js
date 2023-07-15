@@ -1,9 +1,10 @@
 import React from 'react';
-import FliLogo from '../asset/flipos_logo.png';
+import HiPetLogo from '../asset/hi_pet_logo1.png';
 import {connect} from "react-redux";
 import {ConnectedNavbar} from "./navbar";
 import ConnectMeModal from "../modal/connect_me";
 import {mapDispatchToProps} from "../body/dispatch_action";
+import {Image} from "antd";
 
 
 class Navigation extends React.Component {
@@ -66,24 +67,25 @@ class Navigation extends React.Component {
             marginRight: "10px",
         };
         const imgStyle = {
-            height: "24px",
+            height: "40px",
             margin: "auto",
         };
-        const liStyle = {
+        const HiPetLogoStyle = {
+            width: '162px',
             float: "left",
             display: "flex",
             alignItems: "center",
             height: "80px",
-        };
+        }
         return (
             <ul style={navStyle}>
                 <li style={NULLLeftBlockStyle}>
-                    {/*<a style={linkStyle} href="/docs"></a>*/}
                 </li>
-                <li style={liStyle} className="pic">
+                <li style={HiPetLogoStyle} className="pic">
                     <div>
-                        <img
-                            src={FliLogo}
+                        <Image
+                            preview={false}
+                            src={HiPetLogo}
                             alt="图片描述"
                             onClick={this.handleClick('index')}
                             style={imgStyle}
