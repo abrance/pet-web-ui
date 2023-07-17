@@ -37,9 +37,6 @@ function PetProductNavbar() {
         width: '100%',
         backgroundColor: GlobalBackgroundColor,
         paddingBottom: '10px',
-        // borderBottomWidth: 'thin',
-        // borderBottom: 'solid',
-        // borderBottomColor: 'rgba(196, 196, 198, 1)'
     }
     return (
         <div>

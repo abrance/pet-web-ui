@@ -7,6 +7,9 @@ class PetProductMatrixMember extends React.Component {
         super(props);
     }
     render() {
+        const divStyle = {
+            padding: "0 10%",
+        }
         const planeStyle = {
             backgroundColor: 'white',
             display: 'flex'
@@ -29,19 +32,21 @@ class PetProductMatrixMember extends React.Component {
         const text5 = '打通小程序点单，外送及商城订单'
         const text6 = '无缝连接会员系统及卡券'
         return (
-            <div style={planeStyle}>
-                <div style={leftDivStyle}>
-                    <h1>{text1}</h1>
-                    <p style={smallSloganStyle}>{text2}</p>
-                </div>
-                <div style={phoneDivTopStyle}>
-                    <Image width='70%' preview={false} src={Phone1} alt='图片描述'/>
-                </div>
-                <div>
-                    <h1>{text3}</h1>
-                    <p style={smallSloganStyle}>{text4}</p>
-                    <p style={smallSloganStyle}>{text5}</p>
-                    <p style={smallSloganStyle}>{text6}</p>
+            <div style={divStyle}>
+                <div style={planeStyle}>
+                    <div style={leftDivStyle}>
+                        <h1>{text1}</h1>
+                        <p style={smallSloganStyle}>{text2}</p>
+                    </div>
+                    <div style={phoneDivTopStyle}>
+                        <Image width='70%' preview={false} src={Phone1} alt='图片描述'/>
+                    </div>
+                    <div>
+                        <h1>{text3}</h1>
+                        <p style={smallSloganStyle}>{text4}</p>
+                        <p style={smallSloganStyle}>{text5}</p>
+                        <p style={smallSloganStyle}>{text6}</p>
+                    </div>
                 </div>
             </div>
         )
