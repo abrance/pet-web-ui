@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import ImgPlane from "./img_plane";
 import CompanyPlane from "./company";
 import PetProductMatrixPlane from "./pet/pet_product_matrix_plane";
+import {GlobalBackgroundColor} from "../const";
 
 export const mapStateToProps = (state) => {
     return {
@@ -17,7 +18,7 @@ export class Body extends React.Component {
 
     render() {
         const bodyStyle = {
-            backgroundColor: 'rgb(246, 246, 248)',
+            backgroundColor: GlobalBackgroundColor,
         }
 
         let appName = this.props.app

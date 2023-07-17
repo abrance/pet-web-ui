@@ -3,6 +3,7 @@ import logo from '../asset/PC1.png';
 import {PetProductAdvantageDes} from "./pet/pet_product_advan_des";
 import {Image, Button} from 'antd'
 import ConnectMeModal from "../modal/connect_me";
+import {GlobalBackgroundColor} from "../const";
 
 
 const buttonContainerStyle = {
@@ -32,13 +33,17 @@ const ConnectMeButton = <div style={buttonContainerStyle}><ConnectMeModal /></di
 function ImgPlane({pageName}) {
     const sectionStyle = {
         display: 'flex',
-        backgroundColor: 'rgb(246, 246, 248)',
+        backgroundColor: GlobalBackgroundColor,
         margin: 0,
     };
 
     const imageDivStyle = {
         paddingTop: '10%',
         height: '85vh',
+    }
+
+    const imageStyle = {
+        backgroundColor: GlobalBackgroundColor
     }
 
     const divStyle = {
@@ -115,7 +120,7 @@ function ImgPlane({pageName}) {
                     {connectMeBtn}
                 </div>
                 <div style={imageDivStyle}>
-                    <Image preview={false} src={logo}></Image>
+                    <Image style={imageStyle} preview={false} src={logo} />
                 </div>
             </section>
             {describe}

@@ -1,10 +1,11 @@
 import React, { useState, useEffect }  from "react";
 import logo from '../asset/PC.jpg';
+import {GlobalBackgroundColor} from "../const";
 
 // TODO 去掉 why
 function WhyPlane() {
     const sectionStyle = {
-        backgroundColor: 'rgb(246, 246, 248)',
+        backgroundColor: GlobalBackgroundColor,
         margin: 0,
     };
 
@@ -40,7 +41,7 @@ function WhyPlane() {
         left: 0,
         width: '100%',
         height: '100vh',
-        backgroundColor: 'rgb(246, 246, 248)',
+        backgroundColor: GlobalBackgroundColor,
         zIndex: -1,
     }
 
