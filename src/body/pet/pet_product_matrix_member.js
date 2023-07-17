@@ -8,6 +8,7 @@ class PetProductMatrixMember extends React.Component {
     }
     render() {
         const planeStyle = {
+            backgroundColor: 'white',
             display: 'flex'
         }
         const phoneDivTopStyle = {
