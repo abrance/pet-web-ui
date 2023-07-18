@@ -20,7 +20,6 @@ const buttonContainerStyle = {
 const connectMeStyle = {
     backgroundColor: 'white',
     color: 'black',
-    //display: 'flex',
 }
 
 const ConnectMeButton = <div style={buttonContainerStyle}><ConnectMeModal /></div>

@@ -4,6 +4,7 @@ import ImgPlane from "./img_plane";
 import CompanyPlane from "./company";
 import PetProductMatrixPlane from "./pet/pet_product_matrix_plane";
 import {GlobalBackgroundColor} from "../const";
+import PetProductPricePlane from "./pet/pet_product_price_plane";
 
 export const mapStateToProps = (state) => {
     return {
@@ -32,6 +33,8 @@ export class Body extends React.Component {
             element = <CompanyPlane/>
         } else if (appName === "pet_product_matrix_plane") {
             element = <PetProductMatrixPlane />
+        } else if (appName === "pet_product_price_plane") {
+            element = <PetProductPricePlane />
         }
         return (
             <div style={bodyStyle}>

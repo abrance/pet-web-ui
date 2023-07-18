@@ -16,7 +16,7 @@ class Navbar extends React.Component {
         const petItems = [
             {key: '1', label: (<div onClick={this.handleClick('pet_product_advantage_plane')}>产品优势</div>)},
             {key: '2', label: (<div onClick={this.handleClick('pet_product_matrix_plane')}>产品矩阵</div>)},
-            {key: '3', label: (<div>价格</div>)},
+            {key: '3', label: (<div onClick={this.handleClick('pet_product_price_plane')}>价格</div>)},
         ];
         const foodItems = [
             {key: '1', label: (<div>产品优势</div>)},
