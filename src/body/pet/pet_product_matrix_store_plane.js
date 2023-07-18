@@ -18,11 +18,13 @@ class PetProductMatrixStorePlane extends React.Component {
             width: '30%',
         }
         const imgPlaneStyle = {
+            borderRadius: '10px',
             marginLeft: '15px',
             width: '70%',
             height: '300px',
         }
         const leftSloganBlockStyle = {
+            borderRadius: '10px',
             paddingTop: '20px',
             backgroundColor: 'white',
             textAlign: 'center'
