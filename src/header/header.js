@@ -4,7 +4,9 @@ import {connect} from "react-redux";
 import {ConnectedNavbar} from "./navbar";
 import ConnectMeModal from "../modal/connect_me";
 import {mapDispatchToProps} from "../body/dispatch_action";
-import {Image} from "antd";
+import {Button, Image} from "antd";
+import MappLogo from "../asset/mapp.png"
+import './header.css'
 
 
 class Navigation extends React.Component {
@@ -77,6 +79,10 @@ class Navigation extends React.Component {
             alignItems: "center",
             height: "80px",
         }
+        const buttonFontStyle = {
+            color: 'white',
+        }
+        const logo = <Image src={MappLogo} />
         return (
             <ul style={navStyle}>
                 <li style={NULLLeftBlockStyle}>
@@ -111,9 +117,7 @@ class Navigation extends React.Component {
                     <ConnectMeModal />
                 </li>
                 <li style={RightFloatLiStyle}>
-                    <a style={linkStyle} href="#">
-                        后台登录
-                    </a>
+                    <Button id='mappbutton' icon={logo}>宠百通</Button>
                 </li>
             </ul>
         );
