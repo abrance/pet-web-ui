@@ -82,14 +82,24 @@ function ImgPlane({pageName}) {
     };
 
     const [text, setText] = useState('');
-    const smallSloganText = 'Bitoon Pet'
+
+    let describe, connectMeBtn;
+    let smallSloganText = 'Bitoon Pet'
+    if (pageName === 'index') {
+        connectMeBtn = ConnectMeButton
+    } else if (pageName === 'pet_product_advantage_plane') {
+        describe = PetProductAdvantageDes
+        smallSloganText = '洗美服务,在线预约'
+    }
 
     useEffect(() => {
-
-        const sloganText = '一站式宠物店管理系统，集收银、小程序、会员管理于一体All in one'; // 你想要显示的文字
-
         let index = 0;
-        const interval = setInterval(() => {
+        let sloganTextV = '一站式宠物店管理系统，集收银、小程序、会员管理于一体All in one';
+        if (pageName === 'pet_product_advantage_plane') {
+            sloganTextV = '商家及客户均可支持服务预约,在线预约洗护,美容等服务'
+        }
+        const sloganText = sloganTextV
+        let interval = setInterval(() => {
             setText(sloganText.substring(0, index));
             index++;
 
@@ -101,14 +111,7 @@ function ImgPlane({pageName}) {
         return () => {
             clearInterval(interval); // 清除 interval，确保组件卸载时停止动画
         };
-    }, []);
-
-    let describe, connectMeBtn;
-    if (pageName === 'index') {
-        connectMeBtn = ConnectMeButton
-    } else if (pageName === 'pet_product_advantage_plane') {
-        describe = PetProductAdvantageDes
-    }
+    }, [pageName]);
 
     return (
         <div>
