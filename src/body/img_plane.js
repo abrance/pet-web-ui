@@ -1,5 +1,6 @@
 import React, { useState, useEffect }  from "react";
-import logo from '../asset/PC1.png';
+import PCImage from '../asset/PC1.png';
+import PCImage2 from '../asset/PC2.png';
 import {PetProductAdvantageDes} from "./pet/pet_product_advan_des";
 import {Image, Button} from 'antd'
 import ConnectMeModal from "../modal/connect_me";
@@ -85,11 +86,13 @@ function ImgPlane({pageName}) {
 
     let describe, connectMeBtn;
     let smallSloganText = 'Bitoon Pet'
+    let image = PCImage;
     if (pageName === 'index') {
         connectMeBtn = ConnectMeButton
     } else if (pageName === 'pet_product_advantage_plane') {
-        describe = PetProductAdvantageDes
+        //describe = PetProductAdvantageDes
         smallSloganText = '洗美服务,在线预约'
+        image = PCImage2
     }
 
     useEffect(() => {
@@ -122,10 +125,9 @@ function ImgPlane({pageName}) {
                     {connectMeBtn}
                 </div>
                 <div style={imageDivStyle}>
-                    <Image style={imageStyle} preview={false} src={logo} />
+                    <Image style={imageStyle} preview={false} src={image} />
                 </div>
             </section>
-            {describe}
         </div>
     )
 }
