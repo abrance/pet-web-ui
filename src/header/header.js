@@ -82,7 +82,7 @@ class Navigation extends React.Component {
         const buttonFontStyle = {
             color: 'white',
         }
-        const logo = <Image src={MappLogo} />
+        const logo = <Image preview={false} src={MappLogo} />
         return (
             <ul style={navStyle}>
                 <li style={NULLLeftBlockStyle}>

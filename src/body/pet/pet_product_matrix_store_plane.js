@@ -15,19 +15,20 @@ class PetProductMatrixStorePlane extends React.Component {
             //height: '300px',
         }
         const sloganPlaneStyle = {
+            height: '650px',
             width: '30%',
         }
         const imgPlaneStyle = {
             borderRadius: '10px',
-            marginLeft: '15px',
-            width: '70%',
-            height: '300px',
+            paddingLeft: '2%',
+            width: '68%',
         }
         const leftSloganBlockStyle = {
             borderRadius: '10px',
             paddingTop: '20px',
             backgroundColor: 'white',
-            textAlign: 'center'
+            textAlign: 'center',
+            height: '600px',
         }
         const leftSmallSloganStyle = {
             fontSize: '12px',
@@ -40,10 +41,13 @@ class PetProductMatrixStorePlane extends React.Component {
             fontFamily: 'ui-sans-serif'
         }
         const BlankSloganStyle = {
-            height: '300px'
+            height: 'auto'
         }
         const rightBlockStyle = {
+            backgroundColor: 'white',
+            borderRadius: '10px',
             display: 'flex',
+            height: '620px',
         }
         const rightSloganStyle = {
             fontSize: '12px',
@@ -52,9 +56,7 @@ class PetProductMatrixStorePlane extends React.Component {
         }
         const rightSloganBlockStyle = {
             paddingTop: '20px',
-            paddingLeft: '10%',
-            backgroundColor: 'white',
-            //textAlign: 'center'
+            marginLeft: '10%',
         }
         const rightImgStyle = {
             width: '100%'
@@ -66,7 +68,8 @@ class PetProductMatrixStorePlane extends React.Component {
             // width: '70%',
         }
         const rightImgDivStyle = {
-            width: '90%',
+            marginRight: '1%',
+            width: '89%',
             backgroundColor: 'white',
         }
         // const leftBigSloganAuto = {

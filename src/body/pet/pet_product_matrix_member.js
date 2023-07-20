@@ -12,7 +12,9 @@ class PetProductMatrixMember extends React.Component {
         }
         const planeStyle = {
             backgroundColor: 'white',
-            display: 'flex'
+            display: 'flex',
+            borderRadius: '10px',
+            height: '620px'
         }
         const phoneDivTopStyle = {
             padding: '20px 2%'
