@@ -29,8 +29,8 @@ export class Body extends React.Component {
             element = <ImgPlane pageName='index' />
         } else if (appName === "pet_product_advantage_plane") {
             element = <ImgPlane pageName='pet_product_advantage_plane' />
-        } else if (appName === "company") {
-            element = <CompanyPlane/>
+        } else if (appName === "food_product_introduce_plane") {
+            element = <ImgPlane pageName='food_product_introduce_plane' />
         } else if (appName === "pet_product_matrix_plane") {
             element = <PetProductMatrixPlane />
         } else if (appName === "pet_product_price_plane") {

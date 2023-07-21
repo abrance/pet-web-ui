@@ -24,6 +24,43 @@ const divImgStyle = {
     margin: '10px 30px'
 }
 
+const PetDict = {
+    'sloganSmall': '洗美服务 在线预约商家及客户均可进行服务预约，在线预约洗护、美容等服务',
+
+}
+
+function PetProductAdvantageDesPlane({dict}) {
+    let sloganSmall = dict['sloganSmall']
+    return (
+        <>
+            <section style={BlankSectionStyle}>
+                <div style={divStyle2}>
+                    洗美服务 在线预约商家及客户均可进行服务预约，在线预约洗护、美容等服务
+                </div>
+                <div style={divImgStyle}>
+                    <img src={Icon} style={imgStyle} alt={'图片描述'}/>
+                </div>
+            </section>
+            <section style={BlankSectionStyle}>
+                <div style={divStyle2}>
+                    多端订单 一站整合一台设备一站式整合门店线上与线下订单，包括门店收银、手机点单
+                </div>
+                <div style={divImgStyle}>
+                    <img src={Icon} style={imgStyle} alt={'图片描述'}/>
+                </div>
+            </section>
+            <section style={BlankSectionStyle}>
+                <div style={divStyle2}>
+                    统计看板 数据分析门店经营情况一手掌握，数据可视化助力商家把握销售趋势，做出正确决策
+                </div>
+                <div style={divImgStyle}>
+                    <img src={Icon} style={imgStyle} alt={'图片描述'}/>
+                </div>
+            </section>
+        </>
+    )
+}
+
 export const PetProductAdvantageDes =
     <>
         <section style={BlankSectionStyle}>
@@ -31,7 +68,7 @@ export const PetProductAdvantageDes =
                 洗美服务 在线预约商家及客户均可进行服务预约，在线预约洗护、美容等服务
             </div>
             <div style={divImgStyle}>
-                <img src={Icon} style={imgStyle}/>
+                <img src={Icon} style={imgStyle} alt={'图片描述'}/>
             </div>
         </section>
         <section style={BlankSectionStyle}>
@@ -39,7 +76,7 @@ export const PetProductAdvantageDes =
                 多端订单 一站整合一台设备一站式整合门店线上与线下订单，包括门店收银、手机点单
             </div>
             <div style={divImgStyle}>
-                <img src={Icon} style={imgStyle}/>
+                <img src={Icon} style={imgStyle} alt={'图片描述'}/>
             </div>
         </section>
         <section style={BlankSectionStyle}>
@@ -47,7 +84,7 @@ export const PetProductAdvantageDes =
                 统计看板 数据分析门店经营情况一手掌握，数据可视化助力商家把握销售趋势，做出正确决策
             </div>
             <div style={divImgStyle}>
-                <img src={Icon} style={imgStyle}/>
+                <img src={Icon} style={imgStyle} alt={'图片描述'}/>
             </div>
         </section>
     </>

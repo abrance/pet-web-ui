@@ -6,15 +6,14 @@ yarn start
 
 
 # TODO
-页面 favicon 修改
-产品界面的实现 product
-价格界面的实现 price
-联系我们界面的实现 contact
-
+餐饮管理系统 产品介绍 价格 两个页面的实现
+title 修改
+产品矩阵 > 门店管理系统 交互
 
 # DOING
 why 页面的实现 why
 合作商户页面的实现  company
+
 
 
 # DO

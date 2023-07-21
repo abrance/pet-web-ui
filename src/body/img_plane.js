@@ -1,7 +1,6 @@
 import React, { useState, useEffect }  from "react";
 import PCImage from '../asset/PC1.png';
 import PCImage2 from '../asset/PC2.png';
-import {PetProductAdvantageDes} from "./pet/pet_product_advan_des";
 import {Image, Button} from 'antd'
 import ConnectMeModal from "../modal/connect_me";
 import {GlobalBackgroundColor} from "../const";
@@ -93,6 +92,8 @@ function ImgPlane({pageName}) {
         //describe = PetProductAdvantageDes
         smallSloganText = '洗美服务,在线预约'
         image = PCImage2
+    } else if (pageName === 'food_product_introduce_plane') {
+        smallSloganText = '商家后台管理系统融合经营看板、商品管理、会员管理、店铺管理等模块，一站式的全店管理系统'
     }
 
     useEffect(() => {
@@ -100,6 +101,8 @@ function ImgPlane({pageName}) {
         let sloganTextV = '一站式宠物店管理系统，集收银、小程序、会员管理于一体All in one';
         if (pageName === 'pet_product_advantage_plane') {
             sloganTextV = '商家及客户均可支持服务预约,在线预约洗护,美容等服务'
+        } else if (pageName === 'food_product_introduce_plane') {
+            sloganTextV = '微信下单小程序活动触达、一键点单、取餐提醒、会员积分、充值消费等功能，一个小程序全搞定'
         }
         const sloganText = sloganTextV
         let interval = setInterval(() => {

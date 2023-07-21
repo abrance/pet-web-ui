@@ -106,9 +106,9 @@ class Navigation extends React.Component {
                     </div>
                 </li>
                 <li style={ShortLiStyle}>
-                    <a style={linkStyle} onClick={this.handleClick('company')}>
+                    <div style={linkStyle}>
                         <ConnectedNavbar title="餐饮管理系统" keyword="food"/>
-                    </a>
+                    </div>
                 </li>
                 <li style={ShortLiStyle}>
                     {/*<a style={linkStyle} href="#">*/}
