@@ -28,7 +28,7 @@ class PetProductMatrixPlane extends React.Component{
         }
 
         const smallSlogan = 'OUR PRODUCTS'
-        const bigSlogan1 = 'FLIPOS 产品矩阵'
+        const bigSlogan1 = '优优择 产品矩阵'
         const bigSlogan2 = 'POS + 小程序 + CRM'
         return (
             <div>
