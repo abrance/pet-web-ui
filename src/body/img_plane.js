@@ -60,7 +60,7 @@ function ImgPlane({pageName}) {
         fontFamily: 'ui-sans-serif',
         fontWeight: 'bold',
         position: 'absolute', // 添加绝对定位
-        top: '30%', // 位于垂直居中位置
+        top: '25%', // 位于垂直居中位置
         left: '10%', // 位于水平居中位置
         transform: 'translateY(-50%)', // 居中定位
         whiteSpace: 'pre-wrap', // 自动换行

@@ -2,6 +2,7 @@ import {GlobalGreyFontColor} from "../../const";
 import {Button, Image} from "antd";
 import ConfirmLogo from "../../asset/confirm.png";
 import CancelLogo from "../../asset/cancel.png";
+import ConnectMeModal from "../../modal/connect_me";
 
 function FeatureSection({type, text}) {
     let imgSrc, textColor;
@@ -84,6 +85,12 @@ export function PriceSection({dict}) {
     const buttonDivStyle = {
         paddingTop: '10px'
     }
+    let buttonValue;
+    if (productText === '免费试用') {
+        buttonValue = <Button>下载试用</Button>
+    } else {
+        buttonValue = <ConnectMeModal />
+    }
     return (
         <div style={priceSectionStyle}>
             <h1>{productText}</h1>
@@ -96,7 +103,7 @@ export function PriceSection({dict}) {
             </div>
             <ImportantText importantText={importantText} unfocusedText={unfocusedText}/>
             <div style={buttonDivStyle}>
-                <Button>下载试用</Button>
+                {buttonValue}
             </div>
             <div style={blankDivStyle}/>
         </div>
