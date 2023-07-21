@@ -30,6 +30,21 @@ let commonPriceDict = {
     'unfocusedText': ' 元店/月',
 }
 
+let Advan1PriceDict = {
+    'productText': '进阶版',
+    'productDesc': '在标准版基础上升级小程序模板选择及更多会员和营销功能。',
+    'feature1Type': 'confirm',
+    'feature2Type': 'cancel',
+    'feature3Type': 'cancel',
+    'feature4Type': 'cancel',
+    'feature1Text': '基础版所有功能',
+    'feature2Text': '更多小程序模板',
+    'feature3Text': '小程序英文语言支持',
+    'feature4Text': '礼品卡功能',
+    'importantText': '999',
+    'unfocusedText': ' 元店/月',
+}
+
 let foreverPriceDict = {
     'productText': '终身版',
     'productDesc': '在标准版基础上升级小程序模板选择及更多会员和营销功能。',
@@ -49,7 +64,8 @@ function PetProductPricePlane() {
     const dict = {
         'firstPriceDict': freePriceDict,
         'secondPriceDict': commonPriceDict,
-        'thirdPriceDict': foreverPriceDict
+        'thirdPriceDict': Advan1PriceDict,
+        'forthPriceDict': foreverPriceDict,
     }
     return ProductPricePlane({dict})
 }

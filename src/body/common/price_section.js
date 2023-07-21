@@ -107,6 +107,7 @@ export function ProductPricePlane({dict}) {
     let firstPriceDict = dict['firstPriceDict']
     let secondPriceDict = dict['secondPriceDict']
     let thirdPriceDict = dict['thirdPriceDict']
+    let forthPriceDict = dict['forthPriceDict']
     const divStyle = {
         width: '100%'
     }
@@ -142,6 +143,7 @@ export function ProductPricePlane({dict}) {
                 <PriceSection dict={firstPriceDict}/>
                 <PriceSection dict={secondPriceDict}/>
                 <PriceSection dict={thirdPriceDict}/>
+                <PriceSection dict={forthPriceDict}/>
             </div>
         </div>
     )
