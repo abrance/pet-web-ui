@@ -1,7 +1,7 @@
 import {ProductPricePlane} from "../common/price_section";
 
 let freePriceDict = {
-    'productText': '免费试用',
+    'productText': '基础版',
     'productDesc': '满足线下单店经营管理需求',
     'feature1Type': 'confirm',
     'feature2Type': 'confirm',

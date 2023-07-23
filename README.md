@@ -10,6 +10,13 @@ yarn start
 title 修改
 产品矩阵 > 门店管理系统 交互
 
+价格页面
+餐饮产品介绍 两个 slogan 切换
+联系我们
+产品优势 三个 slogan 切换
+矩阵 小程序 有几个按钮
+
+
 # DOING
 why 页面的实现 why
 合作商户页面的实现  company

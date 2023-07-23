@@ -94,11 +94,12 @@ export function PriceSection({dict}) {
         paddingTop: '10px'
     }
     let buttonValue;
-    if (productText === '免费试用') {
-        buttonValue = <Button>下载试用</Button>
-    } else {
-        buttonValue = <ConnectMeModal />
-    }
+    // if (productText === '免费试用') {
+    //     buttonValue = <Button>下载试用</Button>
+    // } else {
+    //     buttonValue = <ConnectMeModal />
+    // }
+    buttonValue = <ConnectMeModal />
     return (
         <div style={priceSectionStyle}>
             <h1>{productText}</h1>
