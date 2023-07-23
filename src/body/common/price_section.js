@@ -76,7 +76,8 @@ export function PriceSection({dict}) {
     const priceSectionStyle = {
         backgroundColor: 'white',
         borderRadius: '10px',
-        marginRight: '2%'
+        marginRight: '2%',
+        width: '23%'
     }
     const productDescStyle = {
         padding: '10px 23%',
