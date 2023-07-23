@@ -104,7 +104,7 @@ class PetProductMatrixStorePlane extends React.Component {
             <div style={leftBigSloganStyle}>{leftBigSlogan2}<span>!</span></div>
             {/*<div style={leftBigSloganAuto}>{leftBigSlogan}<span>?</span></div>*/}
             <p style={leftSmallSloganStyle}>{leftSmallSlogan3}</p>
-            <p style={leftSmallSloganStyle}>{leftSmallSlogan4}</p>
+            <p style={leftSmallSloganStyle}>{leftSmallSlogan4}</p>下`
             <p style={leftSmallSloganStyle}>{leftSmallSlogan5}</p>
             <p style={leftSmallSloganStyle}>{leftSmallSlogan6}</p>
             <div style={BlankSloganStyle}></div>
