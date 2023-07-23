@@ -62,22 +62,30 @@ export function PriceSection({dict}) {
     let feature2Text = dict['feature2Text']
     let feature3Text = dict['feature3Text']
     let feature4Text = dict['feature4Text']
+    let feature5Type = dict['feature5Type']
+    let feature6Type = dict['feature6Type']
+    let feature7Type = dict['feature7Type']
+    let feature8Type = dict['feature8Type']
+    let feature5Text = dict['feature5Text']
+    let feature6Text = dict['feature6Text']
+    let feature7Text = dict['feature7Text']
+    let feature8Text = dict['feature8Text']
     let importantText = dict['importantText']
     let unfocusedText = dict['unfocusedText']
 
     const priceSectionStyle = {
         backgroundColor: 'white',
         borderRadius: '10px',
-        marginRight: '5%'
+        marginRight: '2%'
     }
     const productDescStyle = {
-        padding: '10px 20%',
+        padding: '10px 23%',
         color: GlobalGreyFontColor
     }
     const featureSectionPlane = {
         paddingTop: '20px',
-        paddingLeft: '20%',
-        paddingRight: '30%',
+        paddingLeft: '10%',
+        paddingRight: '10%',
     }
     const blankDivStyle = {
         paddingBottom: '50px'
@@ -100,6 +108,10 @@ export function PriceSection({dict}) {
                 <FeatureSection type={feature2Type} text={feature2Text}/>
                 <FeatureSection type={feature3Type} text={feature3Text}/>
                 <FeatureSection type={feature4Type} text={feature4Text}/>
+                <FeatureSection type={feature5Type} text={feature5Text}/>
+                <FeatureSection type={feature6Type} text={feature6Text}/>
+                <FeatureSection type={feature7Type} text={feature7Text}/>
+                <FeatureSection type={feature8Type} text={feature8Text}/>
             </div>
             <ImportantText importantText={importantText} unfocusedText={unfocusedText}/>
             <div style={buttonDivStyle}>

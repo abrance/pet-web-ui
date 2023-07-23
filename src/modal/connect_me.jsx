@@ -15,13 +15,16 @@ const ConnectMeModal = () => {
     const handleCancel = () => {
         setIsModalOpen(false);
     };
+    const bodyStyle = {
+        width: '211px',
+        height: '211px'
+    }
     return (
         <>
             <Button onClick={showModal}>
                 联系我们
             </Button>
-            <Modal centered open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-                <p>Some contents...</p>
+            <Modal bodyStyle={bodyStyle} centered open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
                 <QR />
             </Modal>
         </>

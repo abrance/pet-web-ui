@@ -1,10 +1,12 @@
 import React from 'react';
-import { QRCode } from 'antd';
+import { Image } from 'antd';
+import QRImage from '../asset/qr.png'
+
 const QR = () => (
-    <QRCode
-        errorLevel="H"
-        value="https://ant.design/"
-        icon="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"
+    <Image
+        // errorLevel="H"
+        // value="https://ant.design/"
+        src={QRImage}
     />
 );
 export default QR;

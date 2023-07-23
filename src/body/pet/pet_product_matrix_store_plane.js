@@ -1,6 +1,7 @@
 import React from 'react'
 import {Image} from "antd";
-import PCImg from '../../asset/PCImg.png'
+import PCImg from '../../asset/PC3.png'
+import SloganAnchor from "./anchor";
 
 class PetProductMatrixStorePlane extends React.Component {
     constructor(props) {
@@ -59,6 +60,7 @@ class PetProductMatrixStorePlane extends React.Component {
             marginLeft: '10%',
         }
         const rightImgStyle = {
+            paddingTop: '200px',
             width: '100%'
             //paddingTop: '100px',
             // backgroundImage: `url(${PCImg})`,
@@ -69,8 +71,13 @@ class PetProductMatrixStorePlane extends React.Component {
         }
         const rightImgDivStyle = {
             marginRight: '1%',
-            width: '89%',
+            width: '49%',
             backgroundColor: 'white',
+        }
+
+        const sloganAnchorStyle = {
+            paddingTop: '100px',
+            width: '40%'
         }
         // const leftBigSloganAuto = {
         //     padding: '0 20%',
@@ -87,7 +94,7 @@ class PetProductMatrixStorePlane extends React.Component {
 
         const leftSmallSlogan3 = '商户的生意在变化，'
         const leftSmallSlogan4 = '收银系统的定位功能早已不是收银本身。'
-        const leftSmallSlogan5 = 'FLIPOS一个应用多种模式'
+        const leftSmallSlogan5 = '优优择一个应用多种模式'
         const leftSmallSlogan6 = '满足不同商户的门店管理需求。'
 
         const leftSloganBlock = <div style={leftSloganBlockStyle}>
@@ -113,7 +120,11 @@ class PetProductMatrixStorePlane extends React.Component {
         </div>
 
         const rightBlock = <div style={rightBlockStyle}>
-            {rightSloganBlock}
+            <div style={sloganAnchorStyle}>
+                <SloganAnchor />
+            </div>
+
+
             <div style={rightImgDivStyle}>
                 <Image preview={false} src={PCImg} style={rightImgStyle} />
             </div>
