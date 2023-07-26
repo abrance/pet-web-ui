@@ -8,6 +8,7 @@ import PetProductPricePlane from "./pet/pet_product_price_plane";
 import app from "../App";
 
 import FoodProductIntroPlane from "./food/food_product_price_plane";
+import PetImgPlane from "./pet/pet_product_advan_des";
 
 export const mapStateToProps = (state) => {
     return {
@@ -31,7 +32,7 @@ export class Body extends React.Component {
         if (appName === "index") {
             element = <ImgPlane pageName='index' />
         } else if (appName === "pet_product_advantage_plane") {
-            element = <ImgPlane pageName='pet_product_advantage_plane' />
+            element = <PetImgPlane />
         } else if (appName === "food_product_introduce_plane") {
             element = <ImgPlane pageName='food_product_introduce_plane' />
         } else if (appName === "pet_product_matrix_plane") {
