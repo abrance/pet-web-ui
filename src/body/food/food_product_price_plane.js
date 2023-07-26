@@ -1,7 +1,7 @@
 import PetProductPricePlane from "../pet/pet_product_price_plane";
 
-function FoodProductIntroPlane() {
+function FoodProductPricePlane() {
     return <PetProductPricePlane/>
 }
 
-export default FoodProductIntroPlane;
+export default FoodProductPricePlane;
