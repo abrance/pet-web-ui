@@ -1,33 +1,11 @@
 import React, { useState, useEffect }  from "react";
 import PCImage from '../asset/PC1.png';
 import PCImage2 from '../asset/PC2.png';
-import {Image, Button} from 'antd'
-import ConnectMeModal from "../modal/connect_me";
+import {Image} from 'antd'
+
 import {GlobalBackgroundColor} from "../const";
+import {ConnectMeButton} from "./common/common";
 
-
-const buttonContainerStyle = {
-    padding: "30px 150px",
-    position: 'absolute',
-    top: 'calc(50% + 160px)', // 调整按钮容器的垂直位置
-    left: '10%', // 调整按钮容器的水平位置
-    width: `calc(100vw / 6)`,  // 控制 button 距离
-    display: 'flex',
-    justifyContent: 'space-between',
-};
-
-
-const connectMeStyle = {
-    backgroundColor: 'white',
-    color: 'black',
-}
-
-const ConnectMeButton = <div style={buttonContainerStyle}><ConnectMeModal /></div>
-//     = <div style={buttonContainerStyle}>
-//     <Button style={ connectMeStyle } onClick={}>
-//         联系我们
-//     </Button>
-// </div>
 
 function ImgPlane({pageName}) {
     const sectionStyle = {

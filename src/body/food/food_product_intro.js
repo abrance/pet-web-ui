@@ -1,7 +1,10 @@
 import {GlobalBackgroundColor} from "../../const";
-import React, {useEffect, useState} from "react";
-import PCImage from '../asset/PC1.png';
+import React, {useEffect, useRef, useState} from "react";
+import PCImage from '../../asset/PC1.png';
 import {Image} from 'antd'
+
+
+
 
 
 function FoodProductIntroducePlane() {
@@ -55,29 +58,49 @@ function FoodProductIntroducePlane() {
         textAlign: 'center', // 文字水平居中
         width: `calc(100vw / 3)`,
     };
-
+    const textItems = [
+        {
+            'smallSloganText': '优优择提供更好的服务体验',
+            'sloganText': '商家后台管理系统融合经营看板、商品管理、会员管理、店铺管理等模块，一站式的全店管理系统',
+        },
+        {
+            'smallSloganText': '优优择提供更好的服务体验',
+            'sloganText': '微信下单小程序活动触达、一键点单、取餐提醒、会员积分、充值消费等功能，一个小程序全搞定',
+        }
+    ]
+    let image = PCImage, textIndex = 0;
+    let textItem = textItems[textIndex]
     const [text, setText] = useState('');
-    let connectMeBtn;
-    let image = PCImage;
+    const [smallSloganText, setSmallSloganText] = useState(textItem['smallSloganText']);
 
-    const smallSloganText = '商家后台管理系统融合经营看板、商品管理、会员管理、店铺管理等模块，一站式的全店管理系统'
+    // 使用持久引用的值作为初始值
+
+    let sloganText = textItem['sloganText'];
 
     useEffect(() => {
+        //const currentItem = textItems[textIndex % textItems.length];
         let index = 0;
-        const sloganText = '微信下单小程序活动触达、一键点单、取餐提醒、会员积分、充值消费等功能，一个小程序全搞定'
+
         let interval = setInterval(() => {
             setText(sloganText.substring(0, index));
             index++;
 
             if (index > sloganText.length) {
-                clearInterval(interval);
+                index = 0;
+                textIndex++;
+                //textItem = textItems[textIndex % textItems.length];
+                setSmallSloganText(textItems[textIndex % textItems.length]['smallSloganText']);
+                sloganText = textItems[textIndex % textItems.length]['sloganText'];
+                setText(sloganText.substring(0, index));
+
+                console.log("small slogan text : ", smallSloganText)
             }
         }, 100); // 间隔时间，控制文字逐步显示的速度
 
         return () => {
             clearInterval(interval); // 清除 interval，确保组件卸载时停止动画
         };
-    }, []);
+    }, [textIndex]);
 
     return (
         <div>
