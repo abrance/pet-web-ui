@@ -29,7 +29,7 @@ const ConnectUsModal = () => {
             <Button onClick={showModal} style={{height: '50px', width: '126px', borderRadius: '25px'}}>
                 联系我们
             </Button>
-            <Modal cancelText={'取消'} okText={'确定'} bodyStyle={bodyStyle} centered open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+            <Modal width={'260px'} closeIcon={null} cancelText={'取消'} okText={'确定'} bodyStyle={bodyStyle} centered open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
                 <QR />
             </Modal>
         </>
