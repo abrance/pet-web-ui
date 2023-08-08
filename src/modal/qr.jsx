@@ -6,7 +6,7 @@ const QR = () => (
     <Image
         // errorLevel="H"
         // value="https://ant.design/"
-        src={QRImage}
+        src={QRImage} preview={false}
     />
 );
 export default QR;
