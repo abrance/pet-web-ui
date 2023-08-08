@@ -62,14 +62,14 @@ export class ConnectUsPlane extends React.Component {
         const sloganStyle = {
             textAlign: 'center',
             fontSize: '72px',
-            height: '300px',
+            height: '30vh',
             display: 'flex',
             justifyContent: 'center', // 水平居中
             alignItems: 'center', // 垂直居中
         };
 
         const BlankStyle = {
-            height: '50vh',
+            height: 'calc(70vh - 455px)',
         }
 
         return (
