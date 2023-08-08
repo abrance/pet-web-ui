@@ -2,7 +2,7 @@ import {GlobalGreyFontColor} from "../../const";
 import {Button, Image} from "antd";
 import ConfirmLogo from "../../asset/confirm.png";
 import CancelLogo from "../../asset/cancel.png";
-import ConnectMeModal from "../../modal/connect_me";
+import ConnectUsModal from "../../modal/connect_me";
 
 function FeatureSection({type, text}) {
     let imgSrc, textColor;
@@ -81,7 +81,8 @@ export function PriceSection({dict}) {
     }
     const productDescStyle = {
         padding: '10px 23%',
-        color: GlobalGreyFontColor
+        color: GlobalGreyFontColor,
+        //lineHeight: '2'
     }
     const featureSectionPlane = {
         paddingTop: '20px',
@@ -100,7 +101,7 @@ export function PriceSection({dict}) {
     // } else {
     //     buttonValue = <ConnectMeModal />
     // }
-    buttonValue = <ConnectMeModal />
+    buttonValue = <ConnectUsModal />
     return (
         <div style={priceSectionStyle}>
             <h1>{productText}</h1>

@@ -2,7 +2,7 @@ import React from 'react';
 import HiPetLogo from '../asset/hi_pet_logo1.png';
 import {connect} from "react-redux";
 import {ConnectedNavbar} from "./navbar";
-import ConnectMeModal from "../modal/connect_me";
+import ConnectUsModal, {ConnectedConnectUsLink, ConnectUsLink} from "../modal/connect_me";
 import {mapDispatchToProps} from "../body/dispatch_action";
 import {Button, Image} from "antd";
 import MappLogo from "../asset/mapp.png"
@@ -111,10 +111,14 @@ class Navigation extends React.Component {
                     </div>
                 </li>
                 <li style={ShortLiStyle}>
+                    <div style={linkStyle}>
+                        {/*<ConnectedNavbar title="联系我们" keyword="connect_me"/>*/}
+                        <ConnectedConnectUsLink />
+                    </div>
                     {/*<a style={linkStyle} href="#">*/}
                     {/*    联系我们*/}
                     {/*</a>*/}
-                    <ConnectMeModal />
+                    {/*<ConnectMeModal />*/}
                 </li>
                 <li style={RightFloatLiStyle}>
                     <Button id='mappbutton' icon={logo}>宠百通</Button>

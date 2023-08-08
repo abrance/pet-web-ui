@@ -1,4 +1,4 @@
-import ConnectMeModal from "../../modal/connect_me";
+import ConnectUsModal from "../../modal/connect_me";
 
 export const buttonContainerStyle = {
     padding: "30px 150px",
@@ -10,4 +10,4 @@ export const buttonContainerStyle = {
     justifyContent: 'space-between',
 };
 
-export const ConnectMeButton = <div style={buttonContainerStyle}><ConnectMeModal /></div>
+export const ConnectMeButton = <div style={buttonContainerStyle}><ConnectUsModal /></div>

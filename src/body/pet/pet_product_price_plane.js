@@ -79,7 +79,7 @@ let foreverPriceDict = {
     'feature5Type': 'confirm',
     'feature6Type': 'confirm',
     'feature7Type': 'confirm',
-    'feature8Type': 'cancel',
+    'feature8Type': 'confirm',
     'feature1Text': '智能收银',
     'feature2Text': '订单+预约+经营数据分析',
     'feature3Text': '宠物顾客信息管理',

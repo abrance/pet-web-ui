@@ -34,12 +34,12 @@ function ImgPlane({pageName}) {
         position: 'relative', // 添加相对定位
     };
     const smallSloganStyle = {
-        fontSize: '20px',
+        fontSize: '34px',
         fontFamily: 'ui-sans-serif',
-        fontWeight: 'bold',
+        //fontWeight: 'bold',
         position: 'absolute', // 添加绝对定位
         top: '25%', // 位于垂直居中位置
-        left: '10%', // 位于水平居中位置
+        left: '-10%', // 位于水平居中位置
         transform: 'translateY(-50%)', // 居中定位
         whiteSpace: 'pre-wrap', // 自动换行
         textAlign: 'center', // 文字水平居中
@@ -101,7 +101,7 @@ function ImgPlane({pageName}) {
         <div>
             <section style={sectionStyle}>
                 <div style={divStyle}>
-                    <h5 style={smallSloganStyle}>{smallSloganText}</h5>
+                    <p style={smallSloganStyle}>{smallSloganText}</p>
                     <h1 style={sloganStyle}>{text}</h1> {/* 在 <div> 图片上方显示 <h1> */}
                     {connectMeBtn}
                 </div>
