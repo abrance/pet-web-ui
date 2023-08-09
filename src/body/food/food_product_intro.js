@@ -1,11 +1,7 @@
 import {GlobalBackgroundColor} from "../../const";
-import React, {useEffect, useRef, useState} from "react";
-import PCImage from '../../asset/PC1.png';
-import {Image} from 'antd'
-
-
-
-
+import React, {useEffect, useState} from "react";
+import PCImage from '../../asset/PC5.png';
+import {Image} from 'antd';
 
 function FoodProductIntroducePlane() {
     const sectionStyle = {
