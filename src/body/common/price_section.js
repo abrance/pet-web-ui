@@ -80,8 +80,11 @@ export function PriceSection({dict}) {
         width: '23%'
     }
     const productDescStyle = {
+        display: 'flex',
         padding: '10px 23%',
+        paddingLeft: '10%',
         color: GlobalGreyFontColor,
+        textAlign: 'left',
         //lineHeight: '2'
     }
     const featureSectionPlane = {
@@ -102,9 +105,13 @@ export function PriceSection({dict}) {
     //     buttonValue = <ConnectMeModal />
     // }
     buttonValue = <ConnectUsModal />
+    let element;
+    if (productText === '进阶版') {
+        element = <Button style={{marginLeft: '20px',height: '24px', width: '60px', fontSize: '12px', backgroundColor: '#F6CD57', borderRadius: '4px', color: 'white'}}>推荐</Button>
+    }
     return (
         <div style={priceSectionStyle}>
-            <h1>{productText}</h1>
+            <h1 style={{display: 'flex', paddingLeft: '10%'}}>{productText}{element}</h1>
             <p style={productDescStyle}>{productDesc}</p>
             <div style={featureSectionPlane}>
                 <FeatureSection type={feature1Type} text={feature1Text}/>
