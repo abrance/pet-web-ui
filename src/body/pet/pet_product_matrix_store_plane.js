@@ -29,7 +29,7 @@ class PetProductMatrixStorePlane extends React.Component {
             paddingTop: '20px',
             backgroundColor: 'white',
             textAlign: 'center',
-            height: '600px',
+            height: '620px',
         }
         const leftSmallSloganStyle = {
             fontSize: '12px',

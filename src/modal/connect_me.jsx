@@ -21,8 +21,9 @@ const ConnectUsModal = () => {
         setIsModalOpen(false);
     };
     const bodyStyle = {
+        textAlign: 'center',
         width: '211px',
-        height: '211px'
+        height: '261px'
     }
     return (
         <>
