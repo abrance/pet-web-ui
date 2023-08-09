@@ -55,7 +55,7 @@ export class Body extends React.Component {
                         {element}
                     </div>
                 </Content>
-                <Footer style={{ textAlign: 'center', backgroundColor: GlobalBackgroundColor }}>
+                <Footer style={{ textAlign: 'center', backgroundColor: GlobalBackgroundColor, zIndex: '1' }}>
                     <div className="record-No">慧明优择（深圳）科技有限公司
                         <a className="footer-bottom" href="https://beian.miit.gov.cn" target="_blank">粤ICP备2021005069号-1</a>
                     </div>

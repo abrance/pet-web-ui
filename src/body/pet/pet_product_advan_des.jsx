@@ -60,7 +60,7 @@ function PetImgPlane() {
     const textItems = [
         {
             'smallSloganText': '洗美服务,在线预约',
-            'sloganText': '商家及客户均可支持服务预约,在线预约洗护,美容等服务'
+            'sloganText': '商家及客户均可进行服务预约，在线预约洗护、美容等服务'
         },
         {
             'smallSloganText': '多端订单 一站整合',

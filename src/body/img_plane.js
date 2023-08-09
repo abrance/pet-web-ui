@@ -1,5 +1,5 @@
 import React, { useState, useEffect }  from "react";
-import PCImage from '../asset/PC1.png';
+import PCImage from '../asset/PC4.png';
 import PCImage2 from '../asset/PC2.png';
 import {Image} from 'antd'
 
@@ -12,10 +12,11 @@ function ImgPlane({pageName}) {
         display: 'flex',
         backgroundColor: GlobalBackgroundColor,
         margin: 0,
+        paddingBottom: `calc(15vh - 80px)`,
     };
 
     const imageDivStyle = {
-        paddingTop: '10%',
+        paddingTop: '20vh',
         height: '85vh',
     }
 
