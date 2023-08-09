@@ -1,7 +1,8 @@
 import React, { useState, useEffect }  from "react";
 import PCImage from '../asset/PC4.png';
 import PCImage2 from '../asset/PC2.png';
-import {Image} from 'antd'
+import PandaLogo from '../asset/panda_logo.png';
+import {Image} from 'antd';
 
 import {GlobalBackgroundColor} from "../const";
 import {ConnectMeButton} from "./common/common";
@@ -102,6 +103,7 @@ function ImgPlane({pageName}) {
         <div>
             <section style={sectionStyle}>
                 <div style={divStyle}>
+                    <Image src={PandaLogo} width={80} style={{backgroundColor: GlobalBackgroundColor, position: 'absolute', top: '10vh', left: 'calc(-15vw)'}} preview={false} />
                     <p style={smallSloganStyle}>{smallSloganText}</p>
                     <h1 style={sloganStyle}>{text}</h1> {/* 在 <div> 图片上方显示 <h1> */}
                     {connectMeBtn}
