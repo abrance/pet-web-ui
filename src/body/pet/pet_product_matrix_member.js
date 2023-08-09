@@ -1,6 +1,6 @@
 import React from 'react'
-import {Image} from "antd";
-import Phone1 from '../../asset/phone8.png'
+import {Button, Image} from "antd";
+import Phone1 from '../../asset/mapp9.png'
 
 class PetProductMatrixMember extends React.Component {
     constructor(props) {
@@ -39,6 +39,18 @@ class PetProductMatrixMember extends React.Component {
                     <div style={leftDivStyle}>
                         <h1>{text1}</h1>
                         <p style={smallSloganStyle}>{text2}</p>
+                        <Button style={{height: '40px', width: '100px', borderRadius: '20px', marginLeft: '5px'}}>
+                            会员充值
+                        </Button>
+                        <Button style={{height: '40px', width: '100px', borderRadius: '20px', marginLeft: '5px'}}>
+                            营销管理
+                        </Button>
+                        <Button style={{height: '40px', width: '100px', borderRadius: '20px', marginLeft: '5px'}}>
+                            复购留存
+                        </Button>
+                        <Button style={{height: '40px', width: '100px', borderRadius: '20px', marginLeft: '5px'}}>
+                            宠物管理
+                        </Button>
                     </div>
                     <div style={phoneDivTopStyle}>
                         <Image width='70%' preview={false} src={Phone1} alt='图片描述'/>
