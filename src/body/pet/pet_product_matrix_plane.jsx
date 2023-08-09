@@ -24,7 +24,7 @@ class PetProductMatrixPlane extends React.Component{
             height: '150px'
         }
         const petProductNavbarStyle = {
-            margin: '30px 10% 0'
+            margin: '30px 20vw 0'
         }
 
         const smallSlogan = 'OUR PRODUCTS'
