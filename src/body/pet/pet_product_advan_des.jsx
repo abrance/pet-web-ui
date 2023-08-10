@@ -1,9 +1,27 @@
 import React, {useEffect, useState} from "react";
-import PCImage2 from '../../asset/PC2.png';
-import {Image} from 'antd'
+import PCImage1 from '../../asset/PC6.png';
+import PCImage2 from '../../asset/PC7.png';
+import PCImage3 from '../../asset/PC8.png';
+import {Carousel, Image} from 'antd'
 import {GlobalBackgroundColor} from "../../const";
 
-
+const textItems = [
+    {
+        'smallSloganText': '洗美服务,在线预约',
+        'sloganText': '商家及客户均可进行服务预约，在线预约洗护、美容等服务',
+        'image': PCImage1
+    },
+    {
+        'smallSloganText': '多端订单 一站整合',
+        'sloganText': '一台设备一站式整合门店线上与线下订单，包括门店收银、手机点单',
+        'image': PCImage2
+    },
+    {
+        'smallSloganText': '统计看板 数据分析',
+        'sloganText': '门店经营情况一手掌握，数据可视化助力商家把握销售趋势，做出正确决策',
+        'image': PCImage3
+    }
+]
 
 
 function PetImgPlane() {
@@ -115,5 +133,69 @@ function PetImgPlane() {
     )
 }
 
+
+export class PetImgPlaneClass extends React.Component{
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <Carousel autoplay autoplaySpeed={2000}>
+                <div>
+                    <PetImgSubPlane dict={textItems[0]}/>
+                </div>
+                <div>
+                    <PetImgSubPlane dict={textItems[1]}/>
+                </div>
+                <div>
+                    <PetImgSubPlane dict={textItems[2]}/>
+                </div>
+            </Carousel>
+        )
+    }
+}
+
+// 轮播图 的子组件
+function PetImgSubPlane({dict}) {
+    const sectionStyle = {
+        display: 'flex',
+        height: '85vh',
+    }
+    const sloganDivStyle = {
+        width: '50vw',
+        // paddingTop: '10vh',
+        height: '85vh',
+    }
+    const imageDivStyle = {
+        width: '50vw',
+        // paddingTop: '10%',
+        height: '85vh',
+    }
+    const smallSloganTextStyle = {
+        paddingTop: '20%',
+        paddingLeft: '20%',
+        textAlign: 'left',
+        fontSize: '34px',
+    }
+    const sloganTextStyle = {
+        paddingLeft: '20%',
+        fontSize: '60px',
+        textAlign: 'left'
+    }
+    const imageStyle = {
+        paddingTop: '20vh',
+    }
+    return (
+        <div style={sectionStyle}>
+            <div style={sloganDivStyle}>
+                <p style={smallSloganTextStyle} >{dict.smallSloganText}</p>
+                <p style={sloganTextStyle}>{dict.sloganText}</p>
+            </div>
+            <div style={imageDivStyle}>
+                <Image style={imageStyle} preview={false} src={dict.image} />
+            </div>
+        </div>
+    )
+}
 
 export default PetImgPlane

@@ -6,7 +6,7 @@ import {GlobalBackgroundColor} from "../const";
 import PetProductPricePlane from "./pet/pet_product_price_plane";
 
 import FoodProductPricePlane from "./food/food_product_price_plane";
-import PetImgPlane from "./pet/pet_product_advan_des";
+import PetImgPlane, {PetImgPlaneClass} from "./pet/pet_product_advan_des";
 import FoodProductIntroducePlane from "./food/food_product_intro";
 import {ConnectUsPlane} from "../modal/connect_me";
 import { Layout } from 'antd';
@@ -19,7 +19,7 @@ export const mapStateToProps = (state) => {
     };
 };
 
-export class Body extends React.Component {
+class Body extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -35,7 +35,8 @@ export class Body extends React.Component {
         if (appName === "index") {
             element = <ImgPlane pageName='index' />
         } else if (appName === "pet_product_advantage_plane") {
-            element = <PetImgPlane />
+            //element = <PetImgPlane />
+            element = <PetImgPlaneClass/>
         } else if (appName === "food_product_introduce_plane") {
             //element = <ImgPlane pageName='food_product_introduce_plane' />
             element = <FoodProductIntroducePlane />
