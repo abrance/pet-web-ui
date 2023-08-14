@@ -17,11 +17,11 @@ class PetProductMatrixMember extends React.Component {
             height: '620px'
         }
         const phoneDivTopStyle = {
-            padding: '20px 2%'
+            padding: '100px 2%'
         }
         const leftDivStyle = {
             padding: "100px 2%",
-            width: '40%'
+            width: '60%'
         }
         const text1 = '会员管理？回归生意及服务'
         const text2 = '同时管理客户及客户的宠物，后续根据宠物到店的服务记录进行复购贴心提醒，促进长期转化'
@@ -39,23 +39,23 @@ class PetProductMatrixMember extends React.Component {
                     <div style={leftDivStyle}>
                         <h1>{text1}</h1>
                         <p style={smallSloganStyle}>{text2}</p>
-                        <Button style={{height: '40px', width: '100px', borderRadius: '20px', marginLeft: '5px'}}>
+                        <Button style={{height: '30px', width: '80px', borderRadius: '16px', marginLeft: '15px', fontSize: '10px'}}>
                             会员充值
                         </Button>
-                        <Button style={{height: '40px', width: '100px', borderRadius: '20px', marginLeft: '5px'}}>
+                        <Button style={{height: '30px', width: '80px', borderRadius: '16px', marginLeft: '15px', fontSize: '10px'}}>
                             营销管理
                         </Button>
-                        <Button style={{height: '40px', width: '100px', borderRadius: '20px', marginLeft: '5px'}}>
+                        <Button style={{height: '30px', width: '80px', borderRadius: '16px', marginLeft: '15px', fontSize: '10px'}}>
                             复购留存
                         </Button>
-                        <Button style={{height: '40px', width: '100px', borderRadius: '20px', marginLeft: '5px'}}>
+                        <Button style={{height: '30px', width: '80px', borderRadius: '16px', marginLeft: '15px', fontSize: '10px'}}>
                             宠物管理
                         </Button>
                     </div>
                     <div style={phoneDivTopStyle}>
                         <Image width='70%' preview={false} src={Phone1} alt='图片描述'/>
                     </div>
-                    <div>
+                    <div style={{paddingTop: '100px', paddingRight: '10px'}}>
                         <h1>{text3}</h1>
                         <p style={smallSloganStyle}>{text4}</p>
                         <p style={smallSloganStyle}>{text5}</p>
