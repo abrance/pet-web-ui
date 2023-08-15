@@ -142,13 +142,13 @@ export class PetImgPlaneClass extends React.Component{
         return (
             <Carousel autoplay autoplaySpeed={2000}>
                 <div>
-                    <PetImgSubPlane dict={textItems[0]}/>
+                    <ImgSubPlane dict={textItems[0]}/>
                 </div>
                 <div>
-                    <PetImgSubPlane dict={textItems[1]}/>
+                    <ImgSubPlane dict={textItems[1]}/>
                 </div>
                 <div>
-                    <PetImgSubPlane dict={textItems[2]}/>
+                    <ImgSubPlane dict={textItems[2]}/>
                 </div>
             </Carousel>
         )
@@ -156,7 +156,7 @@ export class PetImgPlaneClass extends React.Component{
 }
 
 // 轮播图 的子组件
-function PetImgSubPlane({dict}) {
+export function ImgSubPlane({dict}) {
     const sectionStyle = {
         display: 'flex',
         height: '85vh',
@@ -183,7 +183,7 @@ function PetImgSubPlane({dict}) {
         textAlign: 'left'
     }
     const imageStyle = {
-        paddingTop: '20vh',
+        paddingTop: '10vh',
     }
     return (
         <div style={sectionStyle}>

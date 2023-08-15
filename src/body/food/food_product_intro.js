@@ -3,6 +3,7 @@ import React, {useEffect, useState} from "react";
 import PCImage from '../../asset/PC5.png';
 import PhoneImage from '../../asset/phone10.png';
 import {Carousel, Image} from 'antd';
+import {ImgSubPlane} from "../pet/pet_product_advan_des";
 
 function FoodProductIntroducePlane() {
     const sectionStyle = {
@@ -136,57 +137,14 @@ export class FoodImgPlaneClass extends React.Component{
         return (
             <Carousel autoplay autoplaySpeed={2000}>
                 <div>
-                    <PetImgSubPlane dict={textItems[0]}/>
+                    <ImgSubPlane dict={textItems[0]}/>
                 </div>
                 <div>
-                    <PetImgSubPlane dict={textItems[1]}/>
+                    <ImgSubPlane dict={textItems[1]}/>
                 </div>
             </Carousel>
         )
     }
-}
-
-// 轮播图 的子组件
-function PetImgSubPlane({dict}) {
-    const sectionStyle = {
-        display: 'flex',
-        height: '85vh',
-    }
-    const sloganDivStyle = {
-        width: '50vw',
-        // paddingTop: '10vh',
-        height: '85vh',
-    }
-    const imageDivStyle = {
-        width: '50vw',
-        // paddingTop: '10%',
-        height: '85vh',
-    }
-    const smallSloganTextStyle = {
-        paddingTop: '20%',
-        paddingLeft: '20%',
-        textAlign: 'left',
-        fontSize: '34px',
-    }
-    const sloganTextStyle = {
-        paddingLeft: '20%',
-        fontSize: '60px',
-        textAlign: 'left'
-    }
-    const imageStyle = {
-        paddingTop: '20vh',
-    }
-    return (
-        <div style={sectionStyle}>
-            <div style={sloganDivStyle}>
-                <p style={smallSloganTextStyle} >{dict.smallSloganText}</p>
-                <p style={sloganTextStyle}>{dict.sloganText}</p>
-            </div>
-            <div style={imageDivStyle}>
-                <Image style={imageStyle} preview={false} src={dict.image} />
-            </div>
-        </div>
-    )
 }
 
 
