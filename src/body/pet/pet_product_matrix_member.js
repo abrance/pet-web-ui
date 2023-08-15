@@ -1,6 +1,7 @@
 import React from 'react'
 import {Button, Image, Anchor} from "antd";
 import Phone1 from '../../asset/mapp9.png'
+import SloganAnchor from "./anchor";
 
 
 const textItems = [
@@ -65,50 +66,20 @@ class PetProductMatrixMember extends React.Component {
                     {/*<App />*/}
 
 
-                    <div style={{paddingTop: '100px', paddingRight: '10px'}}>
-                        <h1>{textItems[0]}</h1>
-                        <p style={smallSloganStyle}>{textItems[1]}</p>
-                        <p style={smallSloganStyle}>{textItems[2]}</p>
-                        <p style={smallSloganStyle}>{textItems[3]}</p>
+                    {/*<div style={{paddingTop: '100px', paddingRight: '10px'}}>*/}
+                    {/*    <h1>{textItems[0]}</h1>*/}
+                    {/*    <p style={smallSloganStyle}>{textItems[1]}</p>*/}
+                    {/*    <p style={smallSloganStyle}>{textItems[2]}</p>*/}
+                    {/*    <p style={smallSloganStyle}>{textItems[3]}</p>*/}
+                    {/*</div>*/}
+                    <div style={{marginTop: '100px'}}>
+                        <SloganAnchor />
                     </div>
-
 
                 </div>
             </div>
         )
     }
 }
-
-
-
-const App = () => (
-    <Anchor style={{paddingLeft: '10px', paddingTop: '100px', paddingRight: '10px'}}
-            affix={false}
-            //getContainer={() => document.getElementById('anchor-container')}
-            items={
-        [
-            {
-                key: '1',
-                //href: '#components-anchor-demo-basic',
-                title: textItems[0],
-            },
-            {
-                key: '2',
-                //href: '#components-anchor-demo-static',
-                title: textItems[1],
-            },
-            {
-                key: '3',
-                //href: '#api',
-                title: textItems[2],
-            },
-            {
-                key: '4',
-                //href: '#API',
-                title: textItems[3],
-            },
-        ]}
-    />
-);
 
 export default PetProductMatrixMember

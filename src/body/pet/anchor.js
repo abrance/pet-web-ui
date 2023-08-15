@@ -62,6 +62,7 @@ const ChangedItem = ({ text }) => {
     };
 
     const [textStyle, setTextStyle] = useState({
+        paddingTop: '10px',
         fontSize: '14px',
         fontWeight: 'normal',
         color: 'initial',
