@@ -6,8 +6,8 @@ import {GlobalBackgroundColor} from "../const";
 import PetProductPricePlane from "./pet/pet_product_price_plane";
 
 import FoodProductPricePlane from "./food/food_product_price_plane";
-import PetImgPlane, {PetImgPlaneClass} from "./pet/pet_product_advan_des";
-import FoodProductIntroducePlane from "./food/food_product_intro";
+import {PetImgPlaneClass} from "./pet/pet_product_advan_des";
+import FoodProductIntroducePlane, {FoodImgPlaneClass} from "./food/food_product_intro";
 import {ConnectUsPlane} from "../modal/connect_me";
 import { Layout } from 'antd';
 
@@ -39,7 +39,7 @@ class Body extends React.Component {
             element = <PetImgPlaneClass/>
         } else if (appName === "food_product_introduce_plane") {
             //element = <ImgPlane pageName='food_product_introduce_plane' />
-            element = <FoodProductIntroducePlane />
+            element = <FoodImgPlaneClass />
         } else if (appName === "pet_product_matrix_plane") {
             element = <PetProductMatrixPlane />
         } else if (appName === "pet_product_price_plane") {

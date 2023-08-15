@@ -1,7 +1,8 @@
 import {GlobalBackgroundColor} from "../../const";
 import React, {useEffect, useState} from "react";
 import PCImage from '../../asset/PC5.png';
-import {Image} from 'antd';
+import PhoneImage from '../../asset/phone10.png';
+import {Carousel, Image} from 'antd';
 
 function FoodProductIntroducePlane() {
     const sectionStyle = {
@@ -109,6 +110,81 @@ function FoodProductIntroducePlane() {
                     <Image style={imageStyle} preview={false} src={image} />
                 </div>
             </section>
+        </div>
+    )
+}
+
+const textItems = [
+    {
+        'smallSloganText': '商家后台管理系统',
+        'sloganText': '融合经营看板、商品管理、会员管理、店铺管理等模块，一站式的全店管理系统',
+        'image': PCImage,
+    },
+    {
+        'smallSloganText': '微信下单小程序',
+        'sloganText': '活动触达、一键点单、取餐提醒、会员积分、充值消费等功能，一个小程序全搞定',
+        'image': PhoneImage,
+    }
+]
+
+
+export class FoodImgPlaneClass extends React.Component{
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <Carousel autoplay autoplaySpeed={2000}>
+                <div>
+                    <PetImgSubPlane dict={textItems[0]}/>
+                </div>
+                <div>
+                    <PetImgSubPlane dict={textItems[1]}/>
+                </div>
+            </Carousel>
+        )
+    }
+}
+
+// 轮播图 的子组件
+function PetImgSubPlane({dict}) {
+    const sectionStyle = {
+        display: 'flex',
+        height: '85vh',
+    }
+    const sloganDivStyle = {
+        width: '50vw',
+        // paddingTop: '10vh',
+        height: '85vh',
+    }
+    const imageDivStyle = {
+        width: '50vw',
+        // paddingTop: '10%',
+        height: '85vh',
+    }
+    const smallSloganTextStyle = {
+        paddingTop: '20%',
+        paddingLeft: '20%',
+        textAlign: 'left',
+        fontSize: '34px',
+    }
+    const sloganTextStyle = {
+        paddingLeft: '20%',
+        fontSize: '60px',
+        textAlign: 'left'
+    }
+    const imageStyle = {
+        paddingTop: '20vh',
+    }
+    return (
+        <div style={sectionStyle}>
+            <div style={sloganDivStyle}>
+                <p style={smallSloganTextStyle} >{dict.smallSloganText}</p>
+                <p style={sloganTextStyle}>{dict.sloganText}</p>
+            </div>
+            <div style={imageDivStyle}>
+                <Image style={imageStyle} preview={false} src={dict.image} />
+            </div>
         </div>
     )
 }
