@@ -19,10 +19,12 @@ class PetProductMatrixShopMappPlane extends React.Component {
             display: 'flex'
         }
         const phoneDivBottomStyle = {
-            padding: '100px 2%'
+            padding: '100px 1%',
+            width: '20%'
         }
         const phoneDivTopStyle = {
-            padding: '20px 2%'
+            padding: '20px 2%',
+            width: '20%'
         }
         const imgStyle = {
             backgroundColor: 'rgba(235, 236, 237, 1)'

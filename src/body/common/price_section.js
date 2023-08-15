@@ -3,6 +3,7 @@ import {Button, Image} from "antd";
 import ConfirmLogo from "../../asset/confirm.png";
 import CancelLogo from "../../asset/cancel.png";
 import ConnectUsModal from "../../modal/connect_me";
+import "./price_section.css";
 
 function FeatureSection({type, text}) {
     let imgSrc, textColor;
