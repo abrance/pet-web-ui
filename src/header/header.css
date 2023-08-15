@@ -5,3 +5,7 @@
 #mappbutton span {
     color: white;
 }
+
+:where(.css-dev-only-do-not-override-1m62vyb).ant-btn:not(.ant-btn-icon-only)>.ant-btn-icon:not(:last-child) {
+    margin-inline-end: 5px;
+}

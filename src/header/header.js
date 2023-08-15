@@ -121,7 +121,7 @@ class Navigation extends React.Component {
                     {/*<ConnectMeModal />*/}
                 </li>
                 <li style={RightFloatLiStyle}>
-                    <Button id='mappbutton' icon={logo} href={"http://cbt-admin-demo.youyouze.com/login"}>宠百通</Button>
+                    <Button style={{borderRadius: '25px', width: '105px', height: '40px', textAlign: 'center', paddingTop: '6px', fontSize: '14px'}} id='mappbutton' icon={logo} href={"http://cbt-admin-demo.youyouze.com/login"}><span>宠百通</span></Button>
                 </li>
             </ul>
         );
