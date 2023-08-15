@@ -1,6 +1,15 @@
 import React from 'react'
-import {Button, Image} from "antd";
+import {Button, Image, Anchor} from "antd";
 import Phone1 from '../../asset/mapp9.png'
+
+
+const textItems = [
+    <div>基于网页的收银客户端</div>,
+    <div>整合多种支付方式</div>,
+    <div>打通小程序点单，外送及商城订单</div>,
+    <div>无缝连接会员系统及卡券</div>,
+]
+
 
 class PetProductMatrixMember extends React.Component {
     constructor(props) {
@@ -29,10 +38,6 @@ class PetProductMatrixMember extends React.Component {
             color: 'grey',
             letterSpacing: '.2rem'
         }
-        const text3 = '基于网页的收银客户端'
-        const text4 = '整合多种支付方式'
-        const text5 = '打通小程序点单，外送及商城订单'
-        const text6 = '无缝连接会员系统及卡券'
         return (
             <div style={divStyle}>
                 <div style={planeStyle}>
@@ -52,19 +57,58 @@ class PetProductMatrixMember extends React.Component {
                             宠物管理
                         </Button>
                     </div>
+
+
                     <div style={phoneDivTopStyle}>
                         <Image width='70%' preview={false} src={Phone1} alt='图片描述'/>
                     </div>
+                    {/*<App />*/}
+
+
                     <div style={{paddingTop: '100px', paddingRight: '10px'}}>
-                        <h1>{text3}</h1>
-                        <p style={smallSloganStyle}>{text4}</p>
-                        <p style={smallSloganStyle}>{text5}</p>
-                        <p style={smallSloganStyle}>{text6}</p>
+                        <h1>{textItems[0]}</h1>
+                        <p style={smallSloganStyle}>{textItems[1]}</p>
+                        <p style={smallSloganStyle}>{textItems[2]}</p>
+                        <p style={smallSloganStyle}>{textItems[3]}</p>
                     </div>
+
+
                 </div>
             </div>
         )
     }
 }
+
+
+
+const App = () => (
+    <Anchor style={{paddingLeft: '10px', paddingTop: '100px', paddingRight: '10px'}}
+            affix={false}
+            //getContainer={() => document.getElementById('anchor-container')}
+            items={
+        [
+            {
+                key: '1',
+                //href: '#components-anchor-demo-basic',
+                title: textItems[0],
+            },
+            {
+                key: '2',
+                //href: '#components-anchor-demo-static',
+                title: textItems[1],
+            },
+            {
+                key: '3',
+                //href: '#api',
+                title: textItems[2],
+            },
+            {
+                key: '4',
+                //href: '#API',
+                title: textItems[3],
+            },
+        ]}
+    />
+);
 
 export default PetProductMatrixMember

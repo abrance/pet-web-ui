@@ -2,3 +2,7 @@
     color: white;
     border-color: white;
 }
+:where(.css-dev-only-do-not-override-1m62vyb).ant-btn {
+    padding-left: 10px;
+    padding-top: 2px;
+}

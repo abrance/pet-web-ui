@@ -60,7 +60,9 @@ class PetProductMatrixStorePlane extends React.Component {
             marginLeft: '10%',
         }
         const rightImgStyle = {
-            paddingTop: '200px',
+            //paddingTop: '100px',
+            zIndex: '1',
+            marginTop: '100px',
             width: '100%'
             //paddingTop: '100px',
             // backgroundImage: `url(${PCImg})`,
@@ -73,11 +75,12 @@ class PetProductMatrixStorePlane extends React.Component {
             marginRight: '1%',
             width: '49%',
             backgroundColor: 'white',
+            justifyContent: 'flex-end',
         }
 
         const sloganAnchorStyle = {
             paddingTop: '100px',
-            width: '40%'
+            width: '50%'
         }
         // const leftBigSloganAuto = {
         //     padding: '0 20%',
@@ -126,12 +129,12 @@ class PetProductMatrixStorePlane extends React.Component {
 
 
             <div style={rightImgDivStyle}>
-                <Image preview={false} src={PCImg} style={rightImgStyle} />
+                <Image width={'299px'} height={'279px'} preview={false} src={PCImg} style={rightImgStyle} />
             </div>
         </div>
 
         return (
-            <div style={StoreBodyPlaneStyle}>
+            <div id={"anchor-row-store-plane"} style={StoreBodyPlaneStyle}>
                 <div style={sloganPlaneStyle}>
                     {leftSloganBlock}
                 </div>

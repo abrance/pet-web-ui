@@ -108,7 +108,7 @@ export function PriceSection({dict}) {
     buttonValue = <ConnectUsModal />
     let element;
     if (productText === '进阶版') {
-        element = <Button style={{marginLeft: '20px',height: '24px', width: '60px', fontSize: '12px', backgroundColor: '#F6CD57', borderRadius: '4px', color: 'white'}}>推荐</Button>
+        element = <Button style={{marginLeft: '20px', height: '24px', width: '50px', fontSize: '10px', backgroundColor: '#F6CD57', borderRadius: '10px', color: 'white'}}>推荐</Button>
     }
     return (
         <div style={priceSectionStyle}>
